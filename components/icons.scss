@@ -1,0 +1,41 @@
+.icon {
+  // color: map-get($colors, "black");
+  display: inline-block;
+  fill: currentColor;
+  font-size: map-get($spacing, "m");
+  height: 1em;
+  vertical-align: -0.05em;
+  width: 1em;
+}
+
+.icon-xs {
+  font-size: map-get($spacing, "xm");
+}
+
+.icon-s {
+  font-size: map-get($spacing, "m");
+}
+
+.icon-m {
+  font-size: map-get($spacing, "xl");
+}
+
+.icon-l {
+  font-size: map-get($spacing, "xxxl");
+}
+
+.icon-xl {
+  font-size: map-get($spacing, "xxxxl");
+}
+
+$icon-colors: ('black', 'blue', 'green', 'yellow', 'red', 'grey', 'white', 'grey-l', 'inherit');
+
+.icon.gray { color: map-get($colors, "gray500"); }
+.icon.blue { color: map-get($colors, "blue500"); }
+.icon.green { color: map-get($colors, "green500"); }
+.icon.yellow { color: map-get($colors, "yellow500"); }
+.icon.red { color: map-get($colors, "red500"); }
+
+.icon.white-transparent {
+  fill-opacity: 0.3;
+}

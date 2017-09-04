@@ -1,0 +1,37 @@
+.alignItems-flexStart           { align-items: flex-start; }
+.alignItems-flexEnd             { align-items: flex-end; }
+.alignItems-center              { align-items: center; }
+.alignItems-baseline            { align-items: baseline; }
+.alignItems-stretch             { align-items: stretch; }
+
+@include bp1 {
+    .bp1-alignItems-flexStart           { align-items: flex-start; }
+    .bp1-alignItems-flexEnd             { align-items: flex-end; }
+    .bp1-alignItems-center              { align-items: center; }
+    .bp1-alignItems-baseline            { align-items: baseline; }
+    .bp1-alignItems-stretch             { align-items: stretch; }
+}
+
+@include bp2 {
+    .bp2-alignItems-flexStart           { align-items: flex-start; }
+    .bp2-alignItems-flexEnd             { align-items: flex-end; }
+    .bp2-alignItems-center              { align-items: center; }
+    .bp2-alignItems-baseline            { align-items: baseline; }
+    .bp2-alignItems-stretch             { align-items: stretch; }
+}
+
+@include bp3 {
+    .bp3-alignItems-flexStart           { align-items: flex-start; }
+    .bp3-alignItems-flexEnd             { align-items: flex-end; }
+    .bp3-alignItems-center              { align-items: center; }
+    .bp3-alignItems-baseline            { align-items: baseline; }
+    .bp3-alignItems-stretch             { align-items: stretch; }
+}
+
+@include bp4 {
+    .bp4-alignItems-flexStart           { align-items: flex-start; }
+    .bp4-alignItems-flexEnd             { align-items: flex-end; }
+    .bp4-alignItems-center              { align-items: center; }
+    .bp4-alignItems-baseline            { align-items: baseline; }
+    .bp4-alignItems-stretch             { align-items: stretch; }
+}

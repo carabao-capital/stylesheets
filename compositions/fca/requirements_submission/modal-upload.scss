@@ -1,0 +1,84 @@
+//Sass For documents modal ID import
+.modal-upload {
+  .modal-header {
+    padding-top: map-get($spacing, 'm');
+    padding-bottom: map-get($spacing, 'm');
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: map-get($colors, 'gray100');
+    position: relative;
+
+    h3 {
+      font-size: 20px;
+      line-height: 26px;
+      color: map_get($colors, 'grey100');
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 18px;
+      color: map_get($colors, 'asphalt');
+    }
+  }
+
+  .modal-body {
+    @include mobile {
+      border: none !important;
+      flex-direction: column;
+    }
+
+    .content-id-form {
+      flex: 0 0 50%;
+
+      @include mobile {
+        flex: 1;
+        padding: 0 20px !important;
+      }
+    }
+
+    .image-content {
+      height: 165px;
+      //margin-bottom: 25px;
+      overflow: hidden;
+
+      > .file-input-button {
+        background-color: map_get($colors, 'brand');
+        z-index: 10;
+      }
+
+      //Class for image to align center.
+      .img-id {
+        @extend .position-absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+    }
+
+    .modal-content {
+      min-height: 407px;
+
+      @include mobile {
+        min-height: 277px;
+      }
+
+      h2 {
+        margin-top: 10px;
+        margin-bottom: 18px;
+      }
+
+      > .icon{
+        font-size: 72px;
+        line-height: 72px;
+      }
+    }
+  }
+
+  .modal-footer {
+    padding-top: map-get($spacing, "s");
+    padding-bottom: map-get($spacing, "m");
+    text-align: center;
+  }
+}

@@ -1,0 +1,219 @@
+.rs-documents-details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid map-get($colors, 'grey-xl');
+
+  @include mobile { min-height: 400px; }
+
+  .rs-boxHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: map-get($spacing, 's');
+
+    .goBack {
+      visibility: hidden;
+      background-color: transparent;
+      cursor: pointer;
+      @include mobile { visibility: visible; }
+    }
+  }
+
+  .rs-boxSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > .icon {
+      font-size: 52px;
+      line-height: 52px;
+
+      @include mobile {
+        margin-bottom: 3px !important;
+      }
+    }
+
+    h3, h4 {
+      @extend .textAlign-center;
+      margin-bottom: 9px;
+    }
+
+    h3 {
+
+      @include mobile {
+        margin-bottom: 14px;
+      }
+    }
+
+    p {
+      color: map-get($colors, "asphalt");
+      line-height: 17px;
+    }
+
+    .required-doc-list { //UL
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0 24px;
+      padding-bottom: 25px;
+      list-style: none;
+
+      > li {
+        flex: (0 0 50%);
+        padding-left: 25px;
+        @extend .position-relative;
+        font-size: 14px;
+        line-height: 22px;
+        color: map-get($colors, 'grey');
+
+        @include mobile {
+          color: map_get($colors, 'asphalt');
+        }
+
+        &:before {
+          content: " ";
+          display: block;
+          height: 7px;
+          width: 7px;
+          @extend .position-absolute;
+          left: 10px;
+          top: 50%;
+          background-color: map-get($colors, 'grey-l');
+          transform: translate(0, -50%);
+          @extend .borderRadius-rounded;
+        }
+      }
+    }
+
+    .doc-uploaded-list {
+      padding: 0 17px;
+      padding-top: 10px;
+
+      > p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+      ul {
+        li {
+          padding: 13px 0;
+          .uploaded-doc {
+            > img {
+              max-height: 35px;
+            }
+            > h6 {
+              margin-left: 5px;
+            }
+          }
+          a > span {
+            font-size: 15px;
+            line-height: 15px;
+          }
+        }
+      }
+    }
+
+    h2.color-green,h3.color-green,h4.color-green,p.color-green,span.color-green {
+      color: map_get($colors , 'green');
+    }
+
+    h2.color-red,h3.color-red,h4.color-red,p.color-red,span.color-red {
+      color: map_get($colors , 'red');
+    }
+  }
+
+  .rs-boxFooter {
+    @extend .padding-xm;
+
+    @include mobile{
+      padding: 0 !important;
+    }
+
+    .btn {
+      height: 48px;
+      line-height: 48px;
+      width: 100%;
+      @extend .textAlign-center;
+      @extend .fontSize-s;
+      @extend .paddingRight-xm;
+      @extend .paddingLeft-xm;
+    }
+
+    .action-buttons { //for mobile only
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        flex: 0 0 50%;
+        align-items: center;
+        flex-direction: column;
+        height: 120px;
+        font-size: 16px;
+        line-height: 18px;
+        border-radius: 0;
+        text-transform: inherit;
+
+        svg {
+          font-size: 36px;
+          margin-bottom: 3px !important;
+        }
+        .icon {
+          font-size: 36px;
+          margin-bottom: 3px !important;
+        }
+      }
+
+    }
+
+    &.btn-boxFooter {
+
+      @include mobile {
+
+        .btn {
+          flex: 1;
+          height: 60px;
+          font-size: 18px;
+          line-height: 23px;
+
+          svg {
+            font-size: 36px;
+          }
+
+          &.display-none {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &.pdf-boxFooter {
+      @include mobile { padding: 15px !important; }
+
+      .btn {
+        text-transform: none;
+        margin: 0 0 8px;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      .btn-grey-l {
+        background-color: transparent;
+        color: map-get($colors, 'black');
+        @extend .fontWeight-semibold;
+        letter-spacing: 0;
+        padding: 0 10px;
+      }
+    }
+
+    .rs-Checkbox {
+      input[type=checkbox] + label {
+        font-size: 13px;
+        line-height: 17px;
+        color: map-get($colors, "asphalt");
+      }
+    }
+  }
+}

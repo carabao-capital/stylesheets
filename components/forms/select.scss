@@ -1,0 +1,35 @@
+.Select, .select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: white;
+  background-size: map-get($spacing, "m") map-get($spacing, "xs");
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  background-image: image_url('select-arrow.png');
+  border: 1px solid map-get($colors, 'gray300');
+  border-radius: map-get($borderRadii, "s");
+  cursor: pointer;
+  font-size: map-get($fontSizes, 's');
+  height: map-get($spacing, "l");
+  padding-left: map-get($spacing, "s");
+  padding-right: map-get($spacing, "xl");
+  width: 100%;
+
+  &.input-error,
+  &.-error { border-color: map-get($colors, "red"); }
+
+  &:hover { border-color: map-get($colors, 'grey'); }
+  &:disabled {
+    background-color: map-get($colors, 'gray100');
+    color: map-get($colors, "gray300");
+    cursor: not-allowed;
+  }
+
+  &:disabled:hover {
+    background-color: map-get($colors, 'gray100');
+    border: 1px solid map-get($colors, 'gray300');
+    color: map-get($colors, "gray300");
+    cursor: not-allowed;
+  }
+}

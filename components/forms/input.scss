@@ -1,0 +1,401 @@
+// text
+// email
+// password
+// number
+// tel
+
+.Input {
+  appearance: none;
+  background-color: white;
+  border: 1px solid map-get($colors, 'gray300');
+  border-radius: map-get($borderRadii, "s");
+  box-shadow: inset 0 1px 2px rgba(map-get($colors, "gray900"), 0.1);
+  font-size: map-get($fontSizes, 's');
+  height: map-get($spacing, "l");
+  padding-left: map-get($spacing, "s");
+  width: 100%;
+
+  &.-rounded {
+    border-radius: map-get($borderRadii, "rounded");
+  }
+}
+
+.Input:focus {
+  border-color: map-get($colors, 'blue');
+}
+
+// Input placeholders
+
+.Input::-webkit-input-placeholder {
+  color: map-get($colors, "gray400");
+}
+.Input::-moz-placeholder {
+  color: map-get($colors, "gray400");
+}
+.Input:-ms-input-placeholder {
+  color: map-get($colors, "gray400");
+}
+
+// Disabled state
+
+.Input:disabled {
+  background-color: map-get($colors, 'gray100');
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.Input:disabled::-webkit-input-placeholder {
+  color: map-get($colors, "gray300");
+}
+.Input:disabled::-moz-placeholder {
+  color: map-get($colors, "gray300");
+}
+.Input:disabled:-ms-input-placeholder {
+  color: map-get($colors, "gray300");
+}
+
+// Size modifications
+
+// .Input.input-s {
+//     height: map-get($spacing, "l");
+//     line-height: map-get($spacing, "l");
+// }
+
+
+
+
+
+
+
+// Remove this shit somehow
+
+.field_with_errors > input {
+    border-color: map-get($colors, "red");
+    border-style: solid;
+    border-width: 1;
+}
+
+// State modifications
+
+.Input.input-error {
+    border-color: map-get($colors, "red");
+}
+
+.Input.input-currency {
+    background-image: image_url('php.svg');
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    padding-left: map-get($spacing, "l");
+}
+
+.Input.input-percentage {
+    background-image: image_url('percentage.svg');
+    background-position: map-get($spacing, "xm") center;
+    background-repeat: no-repeat;
+    padding-left: map-get($spacing, "xl");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input[type=color] {
+    border-radius: map-get($borderRadii, "s");
+    height: map-get($spacing, "l");
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input[type=text].input-inplace {
+    background-color: map-get($colors, "grey");
+    border: none;
+    display: inline;
+    height: auto;
+    line-height: normal;
+    padding: map-get($spacing, "xs");
+}
+
+input[type=text].input-inplace:focus {
+    background-color: darken(map-get($colors, "grey-xl"), 5);
+}
+
+input[type=text].input-inplace--white {
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// value inputs
+.value-input {
+    display: inline;
+}
+
+.value-input-value {
+    display: block;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.value-input-value--clickable {
+    cursor: pointer;
+}
+
+.value-input input[type=text],
+.value-input input[type=tel],
+.value-input input[type=number],
+.value-input input[type=email],
+.value-input input[type=password] {
+    background-color: map-get($colors, "grey");
+    border: none;
+    display: inline;
+    font-size: inherit;
+    height: map-get($spacing, "l");
+    line-height: map-get($spacing, "l");
+    padding-left: map-get($spacing, "s");
+    padding-right: map-get($spacing, "s");
+    width: 100%;
+}
+
+.value-input input[type=text].input-percentage,
+.value-input input[type=tel].input-percentage,
+.value-input input[type=number].input-percentage,
+.value-input input[type=email].input-percentage,
+.value-input input[type=password].input-percentage {
+    background-image: image_url('percentage.svg');
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    padding-left: map-get($spacing, "xl");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.input-with-icon {
+  background-color: white;
+  box-shadow: inset 0 1px 2px rgba(map-get($colors, "gray900"), 0.1);
+  font-size: map-get($fontSizes, 's');
+  height: map-get($spacing, "l");
+  padding-left: map-get($spacing, "s");
+  width: 100%;
+
+  border: none;
+  position: relative;
+  padding: map-get($spacing, "s");
+}
+
+.input-with-icon input {
+  border: none;
+  outline: none;
+  padding-left: map-get($spacing, "xl");
+}
+
+.input-with-icon input:focus {
+  outline: none;
+}
+
+.input-with-icon .icon {
+  left: 12px;
+  position: absolute;
+  top: 3px;
+  z-index: 5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.date-select-inputs {
+  @extend .clearfix;
+
+  select {
+    float: left;
+  }
+
+  select:nth-child(1) {
+    width: 30%;
+    margin-right: 2%;
+  }
+
+  select:nth-child(2) {
+    width: 36%;
+    margin-right: 2%;
+  }
+
+  select:nth-child(3) {
+    width: 30%;
+  }
+}

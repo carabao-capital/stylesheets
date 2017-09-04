@@ -1,0 +1,36 @@
+.autocomplete-suggestions {
+    background: #FFF;
+    border: 1px solid #eee;
+    margin-top: 1px;
+    overflow: auto;
+}
+
+.autocomplete-suggestion {
+    cursor: pointer;
+    overflow: hidden;
+    padding: map-get($spacing, "xs") map-get($spacing, "s");
+    white-space: nowrap;
+}
+
+.autocomplete-selected {
+    background: map-get($colors, 'brand');
+    color: #fff;
+}
+
+.autocomplete-selected strong {
+    color: #fff !important;
+}
+
+.autocomplete-suggestions strong {
+    color: map-get($colors, 'brand');
+    font-weight: 500;
+}
+
+.autocomplete-group {
+    padding: 2px map-get($spacing, "xs");
+}
+
+.autocomplete-group strong {
+    border-bottom: 1px solid #000;
+    display: block;
+}

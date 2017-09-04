@@ -1,0 +1,66 @@
+.requirements-list {
+  width: 100%;
+  height: 260px;
+  overflow-y: auto;
+
+  @include mobile { height: 100%; }
+
+  &.-expenses {
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  > li {
+    display:flex;
+    justify-content: space-between;
+    padding: map-get($spacing, 's') map-get($spacing, 'm');
+    border-bottom: 1px solid map-get($colors, 'grey-xl');
+    min-height: 50px;
+
+    .title {
+      font-size: 16px;
+      line-height: 20px;
+      color: map-get($colors, "asphalt");
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 18px;
+        color: map_get($colors, 'black');
+      }
+
+      .icon {
+        //@extend .color-grey-d;
+        color: map-get($colors, "asphalt");
+        @extend .verticalAlign-middle;
+        @extend .marginRight-s;
+        font-size: 36px;
+        line-height: 36px;
+
+        @include mobile{
+          color: map_get($colors, 'black');
+          font-size: 30px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    &.selected {
+      background-color: map_get($colors, 'blue100');
+      position: relative;
+
+      .icon { color: map_get($colors, 'black'); }
+
+      .icon-chevron-right {
+        display: block;
+        color: map_get($colors, 'black');
+      }
+
+      .title { color: map_get($colors, 'black'); }
+    }
+
+    &.completed {
+      color: map_get($colors, 'green');
+    }
+  }
+}

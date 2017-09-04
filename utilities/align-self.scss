@@ -1,0 +1,37 @@
+.alignSelf-flexStart           { align-self: flex-start; }
+.alignSelf-flexEnd             { align-self: flex-end; }
+.alignSelf-center              { align-self: center; }
+.alignSelf-baseline            { align-self: baseline; }
+.alignSelf-stretch             { align-self: stretch; }
+
+@include bp1 {
+    .bp1-alignSelf-flexStart           { align-self: flex-start; }
+    .bp1-alignSelf-flexEnd             { align-self: flex-end; }
+    .bp1-alignSelf-center              { align-self: center; }
+    .bp1-alignSelf-baseline            { align-self: baseline; }
+    .bp1-alignSelf-stretch             { align-self: stretch; }
+}
+
+@include bp2 {
+    .bp2-alignSelf-flexStart           { align-self: flex-start; }
+    .bp2-alignSelf-flexEnd             { align-self: flex-end; }
+    .bp2-alignSelf-center              { align-self: center; }
+    .bp2-alignSelf-baseline            { align-self: baseline; }
+    .bp2-alignSelf-stretch             { align-self: stretch; }
+}
+
+@include bp3 {
+    .bp3-alignSelf-flexStart           { align-self: flex-start; }
+    .bp3-alignSelf-flexEnd             { align-self: flex-end; }
+    .bp3-alignSelf-center              { align-self: center; }
+    .bp3-alignSelf-baseline            { align-self: baseline; }
+    .bp3-alignSelf-stretch             { align-self: stretch; }
+}
+
+@include bp4 {
+    .bp4-alignSelf-flexStart           { align-self: flex-start; }
+    .bp4-alignSelf-flexEnd             { align-self: flex-end; }
+    .bp4-alignSelf-center              { align-self: center; }
+    .bp4-alignSelf-baseline            { align-self: baseline; }
+    .bp4-alignSelf-stretch             { align-self: stretch; }
+}

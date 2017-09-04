@@ -1,0 +1,85 @@
+.text {
+  // Text colors
+  &.-neutral  { color: map-get($colors, "gray500"); }
+  &.-primary  { color: map-get($colors, "blue500"); }
+  &.-positive { color: map-get($colors, "green500"); }
+  &.-warning  { color: map-get($colors, "yellow500"); }
+  &.-negative { color: map-get($colors, "red500"); }
+
+  // text sizes
+  &.-size1 {
+    font-size: map-get($fontSizes, "xs");
+    letter-spacing: 0;
+    margin-left: 0;
+    line-height: 16px;
+  }
+
+  &.-size2 {
+    font-size: map-get($fontSizes, "s");
+    letter-spacing: 0;
+    margin-left: 0;
+    line-height: 20px;
+  }
+
+  &.-size3 {
+    font-size: map-get($fontSizes, "m");
+    letter-spacing: -.012em;
+    margin-left: -.2px;
+    line-height: 24px;
+  }
+
+  &.-size4 {
+    font-size: map-get($fontSizes, "l");
+    letter-spacing: -.022em;
+    margin-left: -.4px;
+    line-height: 28px;
+  }
+
+  &.-size5 {
+    font-size: map-get($fontSizes, "xxl");
+    letter-spacing: -.022em;
+    margin-left: -1px;
+    line-height: 36px;
+  }
+}
+// TODO REMOVE
+.Text.size1 {
+  font-size: map-get($fontSizes, "xs");
+  letter-spacing: 0;
+  margin-left: 0;
+  line-height: 16px;
+}
+
+.Text.size2 {
+  font-size: map-get($fontSizes, "s");
+  letter-spacing: 0;
+  margin-left: 0;
+  line-height: 20px;
+}
+
+.Text.size3 {
+  font-size: map-get($fontSizes, "m");
+  letter-spacing: -.012em;
+  margin-left: -.2px;
+  line-height: 24px;
+}
+
+.Text.size4 {
+  font-size: map-get($fontSizes, "l");
+  letter-spacing: -.022em;
+  margin-left: -.4px;
+  line-height: 28px;
+}
+
+.Text.size5 {
+  font-size: map-get($fontSizes, "xxl");
+  letter-spacing: -.022em;
+  margin-left: -1px;
+  line-height: 36px;
+}
+
+.Text.blue { color: map-get($colors, "blue500"); }
+.Text.red { color: map-get($colors, "red500"); }
+.Text.yellow { color: map-get($colors, "yellow500"); }
+.Text.green { color: map-get($colors, "green500"); }
+.Text.gray { color: map-get($colors, "gray500"); }

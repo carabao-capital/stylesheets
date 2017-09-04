@@ -1,0 +1,37 @@
+.justifyContent-space-between { justify-content: space-between; } // This naming convention is wrong
+.justifyContent-space-around { justify-content: space-around; } // This naming convention is wrong
+.justifyContent-flex-start { justify-content: flex-start; } // This naming convention is wrong
+.justifyContent-flex-end { justify-content: flex-end; } // This naming convention is wrong
+.justifyContent-center { justify-content: center; }
+
+@include bp1 {
+    .bp1-justifyContent-space-between { justify-content: space-between; } // This naming convention is wrong
+    .bp1-justifyContent-space-around { justify-content: space-around; } // This naming convention is wrong
+    .bp1-justifyContent-flex-start { justify-content: flex-start; } // This naming convention is wrong
+    .bp1-justifyContent-flex-end { justify-content: flex-end; } // This naming convention is wrong
+    .bp1-justifyContent-center { justify-content: center; }
+}
+
+@include bp2 {
+    .bp2-justifyContent-space-between { justify-content: space-between; } // This naming convention is wrong
+    .bp2-justifyContent-space-around { justify-content: space-around; } // This naming convention is wrong
+    .bp2-justifyContent-flex-start { justify-content: flex-start; } // This naming convention is wrong
+    .bp2-justifyContent-flex-end { justify-content: flex-end; } // This naming convention is wrong
+    .bp2-justifyContent-center { justify-content: center; }
+}
+
+@include bp3 {
+    .bp3-justifyContent-space-between { justify-content: space-between; } // This naming convention is wrong
+    .bp3-justifyContent-space-around { justify-content: space-around; } // This naming convention is wrong
+    .bp3-justifyContent-flex-start { justify-content: flex-start; } // This naming convention is wrong
+    .bp3-justifyContent-flex-end { justify-content: flex-end; } // This naming convention is wrong
+    .bp3-justifyContent-center { justify-content: center; }
+}
+
+@include bp4 {
+    .bp4-justifyContent-space-between { justify-content: space-between; } // This naming convention is wrong
+    .bp4-justifyContent-space-around { justify-content: space-around; } // This naming convention is wrong
+    .bp4-justifyContent-flex-start { justify-content: flex-start; } // This naming convention is wrong
+    .bp4-justifyContent-flex-end { justify-content: flex-end; } // This naming convention is wrong
+    .bp4-justifyContent-center { justify-content: center; }
+}

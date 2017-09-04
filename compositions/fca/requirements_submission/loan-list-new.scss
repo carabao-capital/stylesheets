@@ -1,0 +1,54 @@
+.loan-list-new{
+  @include desktop{
+    max-height: 120px;
+    overflow: scroll;
+  }
+
+  @include mobile{
+    padding: 0 12px;
+  }
+
+  li{
+    margin-bottom: 3px;
+    justify-content: center;
+    align-items: center;
+    @extend .border-bottom;
+
+    &:last-child{
+      border-bottom: none;
+    }
+    small{
+      @extend .display-block;
+      font-size: 9px;
+      line-height: 11px;
+      color: map_get($colors , 'grey');
+    }
+    .icon{
+      font-size: 15px;
+      line-height: 15px;
+    }
+    .bank-title{
+      font-size: 12px;
+      @extend .fontWeight-semibold;
+      color: #576173;
+    }
+    @include mobile{
+      position: relative;
+      padding-right: 30px;
+      .icon{
+        position: absolute;
+        right: 5px;
+        top:16px;
+      }
+    }
+  }
+
+  .img-wrap{
+    width: 65px;
+    height: 39px;
+    img{
+      width: 100%;
+      height:inherit;
+    }
+  }
+}

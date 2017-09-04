@@ -1,0 +1,42 @@
+.slider {
+  height: 45px;
+  width: 100%;
+}
+
+.slider-info {
+  position: relative;
+  right: map-get($spacing, 'xs');
+}
+
+.slider-info .slider-value {
+  color: map-get($colors, 'grey');
+  font-family: "Averta-Light";
+  font-size: map-get($fontSizes, 's');
+  font-weight: normal;
+  position: relative;
+  top: map-get($spacing, 's');
+}
+
+.slider-handle {
+  cursor: pointer;
+  border-left: map-get($spacing, 'xs') solid transparent;
+  border-right: map-get($spacing, 'xs') solid transparent;
+  border-top: map-get($spacing, 's') solid map-get($colors, 'blue');
+  display: block;
+  height: 0;
+  width: 0;
+}
+
+.bar {
+  background-color: map-get($colors, 'blue');
+  height: map-get($spacing, 'xs');
+  top: map-get($spacing, 's');
+}
+
+.bar.bar-0 {
+  background-color: map-get($colors, "grey-xl");
+}
+
+.bar.bar-2 {
+  background-color: map-get($colors, "grey-xl");
+}

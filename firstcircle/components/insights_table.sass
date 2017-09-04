@@ -1,0 +1,50 @@
+//@import "firstcircle/utilities/variables"
+//@import "firstcircle/utilities/spc"
+//@include spc
+
+.insights_table
+  .table-section
+    &.inactive
+      opacity: 0.7
+    @extend .backgroundColor-white
+    @extend .marginBottom-m
+    @extend .padding-s
+    .title
+      @extend .fontWeight-semibold
+      @extend .padding-xs
+      @extend .border-bottom
+      .table-description
+        @extend .fontWeight-r
+        @extend .color-grey
+        @extend .fontSize-xs
+        @extend .paddingTop-xs
+    .attributes-section
+      @extend .padding-s
+      li 
+        @extend .paddingBottom-xs
+        &.inactive
+          opacity: 0.4
+      .status
+        text-transform: lowercase
+        @extend .fontWeight-r
+    .small-title
+      @extend .fontSize-xxs
+      @extend .color-grey
+      @extend .fontWeight-semibold
+      @extend .paddingBottom-xs
+      text-transform: uppercase
+
+    .relationships-section
+      .status
+        margin-bottom: 4px
+
+    .attribute-note 
+      @extend .fontSize-xs
+      @extend .color-grey
+
+  .code-block
+    @extend .fontSize-s
+    @extend .paddingTop-m
+    @extend .paddingBottom-m
+    @extend .backgroundColor-grey-xl
+    @extend .marginTop-s

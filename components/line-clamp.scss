@@ -1,0 +1,28 @@
+.LineClamp {
+	display: block;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.LineClamp-1 {
+	-webkit-line-clamp: 1;
+}
+
+.LineClamp-2 {
+	-webkit-line-clamp: 2;
+}
+
+.LineClamp-3 {
+	-webkit-line-clamp: 3;
+}
+
+.LineClamp-4 {
+	-webkit-line-clamp: 4;
+}
+
+.LineClamp-5 {
+	-webkit-line-clamp: 5;
+}

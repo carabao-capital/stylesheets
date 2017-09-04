@@ -1,0 +1,80 @@
+.input-row {
+  margin-bottom: map-get($spacing, "m");
+}
+
+.input-row.input-row-attachment {
+  border: none;
+  padding: 0;
+}
+
+.input-row.input-row-attachment > .attachment-label {
+  color: map-get($colors, "black");
+  font-size: map-get($fontSizes, 'xs');
+  margin-bottom: map-get($spacing, "s");
+  text-transform: uppercase;
+}
+
+.input-row.input-row-attachment > .attachment-label {
+  @include desktop {
+    display: none;
+  }
+}
+
+
+@include mobile {
+  .input-row {
+    border-bottom: 1px solid map-get($colors, "grey-l");
+    padding: map-get($spacing, "xm");
+    margin-bottom: 0;
+  }
+
+  .input-row label:first-child {
+    color: map-get($colors, "grey");
+    font-size: map-get($fontSizes, 'xs');
+    margin-bottom: 0;
+    text-transform: none;
+    width: 100%;
+  }
+
+  .input-row input[type=text],
+  .input-row input[type=email],
+  .input-row input[type=number],
+  .input-row input[type=password],
+  .input-row textarea {
+    border: none;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .input-row input[type=text],
+  .input-row input[type=email],
+  .input-row input[type=number],
+  .input-row input[type=password] {
+    height: map-get($spacing, "m");
+  }
+
+  .input-row textarea {
+    padding-bottom: map-get($spacing, "xs");
+    padding-top: map-get($spacing, "xs");
+  }
+
+  .input-row select {
+    border: none;
+    height: map-get($spacing, "m");
+    padding-left: 0;
+  }
+
+  .input-row .field_with_errors > input {
+    border: none;
+  }
+
+  .input-row .date-select-inputs {
+      padding-top: map-get($spacing, "xs");
+  }
+
+  .input-row .date-select-inputs select {
+      background-color: map-get($colors, "grey-xl");
+      padding-left: map-get($spacing, "s");
+  }
+}

@@ -1,0 +1,11 @@
+// Generate backgroundColor SPC classes. e.g .backgroundColor-blue
+@each $colour, $value in $colors {
+  .backgroundColor-#{$colour} { background-color: $value; }
+
+  .hover-backgroundColor-#{$colour}:hover { background-color: $value; }
+
+  // This naming convention is incorrect
+  .backgroundColor-feint-#{$colour} { background-color: rgba($value, 0.15); }
+}
+
+.backgroundColor-transparent { background-color: transparent; }

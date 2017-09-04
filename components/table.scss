@@ -1,0 +1,66 @@
+.table, .Table {
+  width: 100%;
+  max-width: 100%;
+  font-size: map-get($fontSizes, 's');
+
+  &.-responsive {
+    @include mobile {
+      tbody > tr {
+        border-bottom: none;
+        margin-bottom: map-get($spacing, "s");
+      }
+
+      thead > tr > th {
+        display: none;
+      }
+
+      tbody > tr > td {
+        display: block;
+        border-bottom: 1px solid map-get($colors, 'gray100');
+      }
+
+      tbody > tr > td:last-child {
+        margin-bottom: map-get($spacing, "m");
+        border-bottom: none;
+      }
+
+      tbody > tr > td[data-th]:before {
+        display: inline-block;
+        content: attr(data-th)": ";
+        width: 100px;
+      }
+
+      tbody > tr > td.amount {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.table tr, .Table tr {
+  border-bottom: 1px solid map-get($colors, 'gray100');
+}
+
+.table td, .Table td,
+.table th, .Table th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 22px;
+}
+
+.table th, .Table th {
+  text-align: left;
+  font-weight: 400;
+  color: map-get($colors, 'gray500');
+}
+
+
+.Table.-padded, .table.-padded th:first-child,
+.Table.-padded, .table.-padded td:first-child {
+  padding-left: map-get($spacing, 'm');
+}
+
+.Table.-padded, .table.-padded th:last-child,
+.Table.-padded, .table.-padded td:last-child {
+  padding-right: map-get($spacing, 'm');
+}

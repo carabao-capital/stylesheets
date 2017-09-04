@@ -1,0 +1,59 @@
+// width
+
+.width-0 { width: 0 }
+.width-auto { width: auto }
+
+.width-200 { width: 200px }
+.width-300 { width: 300px }
+
+@each $percent in $percentages {
+  .width-#{$percent}p { width: #{$percent * 1%} }
+}
+
+@include mobile {
+  .mobile-width-0 { width: 0 }
+  .mobile-width-auto { width: auto }
+
+  .mobile-width-200 { width: 200px }
+  .mobile-width-300 { width: 300px }
+
+  @each $percent in $percentages {
+    .mobile-width-#{$percent}p { width: #{$percent * 1%} }
+  }
+}
+
+@include bp2 {
+  .bp2-width-0 { width: 0 }
+  .bp2-width-auto { width: auto }
+
+  .bp2-width-200 { width: 200px }
+  .bp2-width-300 { width: 300px }
+
+  @each $percent in $percentages {
+    .bp2-width-#{$percent}p { width: #{$percent * 1%} }
+  }
+}
+
+@include bp3 {
+  .bp3-width-0 { width: 0 }
+  .bp3-width-auto { width: auto }
+
+  .bp3-width-200 { width: 200px }
+  .bp3-width-300 { width: 300px }
+
+  @each $percent in $percentages {
+    .bp3-width-#{$percent}p { width: #{$percent * 1%} }
+  }
+}
+
+@include bp4 {
+  .bp4-width-0 { width: 0 }
+  .bp4-width-auto { width: auto }
+
+  .bp4-width-200 { width: 200px }
+  .bp4-width-300 { width: 300px }
+
+  @each $percent in $percentages {
+    .bp4-width-#{$percent}p { width: #{$percent * 1%} }
+  }
+}

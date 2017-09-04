@@ -1,0 +1,12 @@
+// font-sizes
+.fontSize-xxxl { font-size: map-get($fontSizes, 'xxxl') }
+.fontSize-xxl { font-size: map-get($fontSizes, 'xxl') }
+.fontSize-xl { font-size: map-get($fontSizes, 'xl') }
+.fontSize-l { font-size: map-get($fontSizes, 'l') }
+.fontSize-m { font-size: map-get($fontSizes, 'm') }
+.fontSize-s { font-size: map-get($fontSizes, 's') }
+.fontSize-xs { font-size: map-get($fontSizes, 'xs') }
+.fontSize-xxs { font-size: map-get($fontSizes, 'xxs') }
+.fontSize-xxxs { font-size: map-get($fontSizes, 'xxxs') }
+.fontSize-0 { font-size: 0px }
+.fontSize-inherit { font-size: inherit }

@@ -1,0 +1,14 @@
+.PrimaryLink {
+    color: map-get($colors, "blue");
+}
+
+.Link:hover {
+    background-image: linear-gradient(to bottom,currentColor 50%,currentColor 50%);
+    background-repeat: repeat-x;
+    background-size: 100% 1px;
+    background-position: 0 100%;
+}
+
+.Link.light {
+    color: map-get($colors, "grey");
+}

@@ -1,0 +1,63 @@
+.Textarea, .textarea {
+  appearance: none;
+  background-color: white;
+  border: 1px solid map-get($colors, 'gray300');
+  border-radius: map-get($borderRadii, "s");
+  box-shadow: inset 0 1px 2px rgba(map-get($colors, "gray900"), 0.1);
+  font-size: map-get($fontSizes, 's');
+  line-height: 16px;
+  max-height: 200px;
+  min-height: 80px;
+  overflow: auto;
+  padding: map-get($spacing, "s");
+  position: relative;
+  resize: vertical;
+  width: 100%;
+
+  &:focus { border-color: map-get($colors, 'grey'); }
+
+  // Textarea placeholders
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &::-ms-input-placeholder {
+    color: map-get($colors, "grey-l");
+  }
+
+  &.input-error,
+  &.-error {
+    border-color: map-get($colors, "red");
+  }
+
+  &:disabled {
+    background-color: map-get($colors, 'gray100');
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  &:disabled::-webkit-input-placeholder,
+  &:disabled::-moz-placeholder,
+  &:disabled:-ms-input-placeholder {
+    color: map-get($colors, "gray300");
+  }
+}
+
+// Remove this bullshit asap
+
+.Textarea.input-currency {
+  background-image: image_url('php.svg');
+  background-position: map-get($spacing, "s") center;
+  background-repeat: no-repeat;
+  padding-left: map-get($spacing, "m");
+}
+
+.Textarea.input-percentage {
+  background-image: image_url('percentage.svg');
+  background-position: map-get($spacing, "s") center;
+  background-repeat: no-repeat;
+  padding-left: map-get($spacing, "m");
+}
+
+.Textarea.plain {
+  box-shadow: none;
+  border: none;
+}

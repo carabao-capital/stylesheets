@@ -1,0 +1,122 @@
+.Card, .card {
+  background-color: white;
+  border-radius: map-get($borderRadii, "s");
+  box-shadow: 0 1px 1px rgba(39,51,67,0.1);
+  overflow: hidden;
+
+  &.-small { padding: map-get($spacing, "s"); }
+  &.-medium { padding: map-get($spacing, "m"); }
+  &.-large { padding: map-get($spacing, "l"); }
+
+  // card styles for desktop only
+  &.-desktop {
+    @include desktop {
+      padding: map-get($spacing, "l");
+      background-color: white;
+      border-radius: map-get($borderRadii, "m");
+      box-shadow: 0 1px 5px rgba(map-get($colors, "black"), 0.1);
+      display: block;
+    }
+  }
+
+  &.-interactive {
+    cursor: pointer;
+    transition: all 100ms ease;
+  }
+}
+
+// Sizes
+
+.Card.small {
+  padding: map-get($spacing, "s");
+}
+
+.Card.medium {
+  padding: map-get($spacing, "m");
+}
+
+.Card.large {
+  padding: map-get($spacing, "l");
+}
+
+// Interactive cards
+
+.Card.interactive {
+  cursor: pointer;
+  transition: all 100ms ease;
+}
+
+.Card.interactive:hover {
+  box-shadow: 0 3px 15px rgba(map-get($colors, 'black'), .1);
+  // transform: scale(1.01);
+}
+
+// Refactor this shit
+
+.Card.interactive:hover .card-actions {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.card-header {
+  background-color: rgba(map-get($colors, "grey-xl"), 0.5);
+  border-bottom: 1px solid rgba(map-get($colors, "grey"), 0.1);
+  height: map-get($spacing, "xxl");
+  line-height: map-get($spacing, "xxl");
+  padding-left: map-get($spacing, "m");
+  padding-right: map-get($spacing, "m");
+}
+
+// desktop-card will create a card element but only for desktop styling.
+.desktop-card {
+  @include desktop {
+    padding: map-get($spacing, "l");
+    background-color: white;
+    border-radius: map-get($borderRadii, "m");
+    box-shadow: 0 1px 5px rgba(map-get($colors, "black"), 0.1);
+    display: block;
+  }
+}
+
+.card.card-m {
+  box-shadow:
+  0 2px 20px rgba(map-get($colors, "black"), 0.05),
+  0 25px 18px -18px rgba(map-get($colors, "black"), 0.1);
+}
+
+.card.card-l {
+  box-shadow:
+  0 2px 30px rgba(map-get($colors, "black"), 0.2),
+  0 40px 28px -28px rgba(map-get($colors, "black"), 0.2);
+}
+
+// adds the hover effect to a card
+.card-hover {
+  transition-property: all;
+  transition-duration: map-get($transitionDurations, "m");
+  transition-timing-function: ease-out;
+}
+
+.card-hover:hover {
+  box-shadow:
+  0 1px 10px rgba(map-get($colors, "black"), 0.05),
+  0 12px 12px -12px rgba(map-get($colors, "black"), 0.2);
+  transform: translate(0, -1px);
+}
+
+.card-hover.card-l:hover {
+  box-shadow:
+  0 4px 50px rgba(map-get($colors, "black"), 0.28),
+  0 50px 35px -35px rgba(map-get($colors, "black"), 0.28);
+}
+
+.card.card-brand {
+  background-color: map-get($colors, "black");
+  color: white;
+}
+
+.card-blue {
+  color: white;
+  background-image: linear-gradient(map-get($colors, "blue"), map-get($colors, "brand"));
+}

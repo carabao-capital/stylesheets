@@ -1,0 +1,27 @@
+.flexWrap-nowrap              { flex-wrap: nowrap; }
+.flexWrap-wrap                { flex-wrap: wrap; }
+.flexWrap-wrapReverse         { flex-wrap: wrap-reverse; }
+
+@include bp1 {
+    .bp1-flexWrap-nowrap              { flex-wrap: nowrap; }
+    .bp1-flexWrap-wrap                { flex-wrap: wrap; }
+    .bp1-flexWrap-wrapReverse         { flex-wrap: wrap-reverse; }
+}
+
+@include bp2 {
+    .bp2-flexWrap-nowrap              { flex-wrap: nowrap; }
+    .bp2-flexWrap-wrap                { flex-wrap: wrap; }
+    .bp2-flexWrap-wrapReverse         { flex-wrap: wrap-reverse; }
+}
+
+@include bp3 {
+    .bp3-flexWrap-nowrap              { flex-wrap: nowrap; }
+    .bp3-flexWrap-wrap                { flex-wrap: wrap; }
+    .bp3-flexWrap-wrapReverse         { flex-wrap: wrap-reverse; }
+}
+
+@include bp4 {
+    .bp4-flexWrap-nowrap              { flex-wrap: nowrap; }
+    .bp4-flexWrap-wrap                { flex-wrap: wrap; }
+    .bp4-flexWrap-wrapReverse         { flex-wrap: wrap-reverse; }
+}

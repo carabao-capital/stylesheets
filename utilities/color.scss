@@ -1,0 +1,7 @@
+// generates color SPC classes. e.g .color-blue, .color-green
+@each $colour, $value in $colors {
+  .color-#{$colour} { color: $value }
+  .hover-color-#{$colour}:hover { color: $value }
+}
+.color-transparent { color: transparent; }
+.color-inherit { color: inherit; }

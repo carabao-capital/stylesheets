@@ -1,0 +1,67 @@
+// TODO: remove backwards compatibility once converted properly
+.Status, .status {
+  align-items: center;
+  background-color: map-get($colors, 'white');
+  border-radius: map-get($borderRadii, "rounded");
+  box-shadow: inset 0 0 0 1px map-get($colors, 'gray300');
+  display: inline-flex;
+  font-family: "Averta-Semibold";
+  font-size: map-get($fontSizes, 'xxxs');
+  font-weight: normal;
+  height: map-get($spacing, "xm");
+  justify-content: center;
+  letter-spacing: .1em;
+  padding-left: map-get($spacing, "s");
+  padding-right: map-get($spacing, "s");
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &.neutral, &.-neutral {
+    background-color: map-get($colors, 'gray100');
+    color: map-get($colors, 'gray500');
+    box-shadow: none;
+  }
+
+  &.primary, &.-primary {
+    background-color: map-get($colors, 'blue100');
+    color: map-get($colors, 'blue700');
+    box-shadow: none;
+  }
+
+  &.positive, &.-positive {
+    background-color: map-get($colors, 'green100');
+    color: map-get($colors, 'green700');
+    box-shadow: none;
+  }
+
+  &.warning, &.-warning {
+    background-color: map-get($colors, 'yellow100');
+    color: map-get($colors, 'yellow700');
+    box-shadow: none;
+  }
+
+  &.negative, &.-negative {
+    background-color: map-get($colors, 'red100');
+    color: map-get($colors, 'red700');
+    box-shadow: none;
+  }
+
+  // inverted status
+  &.-inverted {
+    color: map-get($colors, 'white');
+    background-color: map-get($colors, 'gray500');
+  }
+
+  &.-primary.-inverted {
+    background-color: map-get($colors, 'blue500');
+  }
+  &.-positive.-inverted {
+    background-color: map-get($colors, 'green500');
+  }
+  &.-warning.-inverted {
+    background-color: map-get($colors, 'yellow500');
+  }
+  &.-negative.-inverted {
+    background-color: map-get($colors, 'red500');
+  }
+}

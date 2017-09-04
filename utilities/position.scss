@@ -1,0 +1,34 @@
+// position
+
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-static { position: static; }
+.position-fixed { position: fixed; }
+
+@include bp1 {
+    .bp1-position-relative { position: relative; }
+    .bp1-position-absolute { position: absolute; }
+    .bp1-position-static { position: static; }
+    .bp1-position-fixed { position: fixed; }
+}
+
+@include bp2 {
+    .bp2-position-relative { position: relative; }
+    .bp2-position-absolute { position: absolute; }
+    .bp2-position-static { position: static; }
+    .bp2-position-fixed { position: fixed; }
+}
+
+@include bp3 {
+    .bp3-position-relative { position: relative; }
+    .bp3-position-absolute { position: absolute; }
+    .bp3-position-static { position: static; }
+    .bp3-position-fixed { position: fixed; }
+}
+
+@include bp4 {
+    .bp4-position-relative { position: relative; }
+    .bp4-position-absolute { position: absolute; }
+    .bp4-position-static { position: static; }
+    .bp4-position-fixed { position: fixed; }
+}

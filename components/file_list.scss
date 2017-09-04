@@ -1,0 +1,72 @@
+.file-list {
+    width: 100%;
+}
+
+.file-list .file {
+    border-bottom: 1px solid map-get($colors, "grey-xl");
+    font-size: map-get($fontSizes, 's');
+    height: map-get($spacing, "xl");
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-list .file .file-preview {
+    background-size: cover;
+    border-radius: map-get($borderRadii, "s");
+    display: inline-block;
+    height: map-get($spacing, "l");
+    margin-bottom: 2px;
+    margin-right: map-get($spacing, "s");
+    vertical-align: middle;
+    width: map-get($spacing, "l");
+}
+
+.file-list .file .file-name {
+    transition-property: all;
+    transition-duration: map-get($transitionDurations, "s");
+    transition-timing-function: ease-out;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.file-list .file.file--uploading {
+    background-image: image_url('loaders/loading-grey-l.gif');
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+}
+
+.file-list .file.file--uploading .file-name {
+    transform: translate(25px, 0);
+}
+
+.file-list .upload-button {
+    font-size: 14px;
+    background-color: rgba(map-get($colors, 'blue'), 0.1);
+    border-radius: map-get($borderRadii, "s");
+    color: map-get($colors, 'blue');
+    cursor: pointer;
+    display: block;
+    height: map-get($spacing, "xl");
+    line-height: map-get($spacing, "xl");
+    margin-top: map-get($spacing, "m");
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.file-list .upload-button:hover {
+    background-color: rgba(map-get($colors, 'blue'), 0.15);
+}
+
+.file-list .upload-button input {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+}

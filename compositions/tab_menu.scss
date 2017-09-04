@@ -1,0 +1,23 @@
+.tab-menu-item {
+  height: map-get($spacing, "l");
+  line-height: map-get($spacing, "l");
+  float: left;
+  font-size: map-get($fontSizes, 's');
+  color: map-get($colors, "black");
+  padding-left: map-get($spacing, "m");
+  padding-right: map-get($spacing, "m");
+  margin-left: map-get($spacing, "xs");
+  margin-right: map-get($spacing, "xs");
+  border-radius: map-get($borderRadii, "s");
+  text-decoration: none;
+  background-color: rgba(map-get($colors, 'black'), 0.1);
+
+  &:hover {
+    background-color: rgba(map-get($colors, 'black'), 0.2);
+  }
+
+  &.tab-menu-item-active {
+    color: map-get($colors, 'white');
+    background-color: map-get($colors, 'blue');
+  }
+}

@@ -1,0 +1,47 @@
+.flexFlow-row-noWrap { flex-flow: row nowrap; }
+
+.flex-grow-1 { flex-grow: 1; }
+.flex-grow-0 { flex-grow: 0; }
+
+.flex-shrink-1 { flex-shrink: 1; }
+.flex-shrink-0 { flex-shrink: 0; }
+
+@include bp1 {
+    .bp1-flexFlow-row-noWrap { flex-flow: row nowrap; }
+
+    .bp1-flex-grow-1 { flex-grow: 1; }
+    .bp1-flex-grow-0 { flex-grow: 0; }
+
+    .bp1-flex-shrink-1 { flex-shrink: 1; }
+    .bp1-flex-shrink-0 { flex-shrink: 0; }
+}
+
+@include bp2 {
+    .bp2-flexFlow-row-noWrap { flex-flow: row nowrap; }
+
+    .bp2-flex-grow-1 { flex-grow: 1; }
+    .bp2-flex-grow-0 { flex-grow: 0; }
+
+    .bp2-flex-shrink-1 { flex-shrink: 1; }
+    .bp2-flex-shrink-0 { flex-shrink: 0; }
+}
+
+@include bp3 {
+    .bp3-flexFlow-row-noWrap { flex-flow: row nowrap; }
+
+    .bp3-flex-grow-1 { flex-grow: 1; }
+    .bp3-flex-grow-0 { flex-grow: 0; }
+
+    .bp3-flex-shrink-1 { flex-shrink: 1; }
+    .bp3-flex-shrink-0 { flex-shrink: 0; }
+}
+
+@include bp4 {
+    .bp4-flexFlow-row-noWrap { flex-flow: row nowrap; }
+
+    .bp4-flex-grow-1 { flex-grow: 1; }
+    .bp4-flex-grow-0 { flex-grow: 0; }
+
+    .bp4-flex-shrink-1 { flex-shrink: 1; }
+    .bp4-flex-shrink-0 { flex-shrink: 0; }
+}

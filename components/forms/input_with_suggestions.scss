@@ -1,0 +1,44 @@
+.input-with-suggestions {
+    position: relative;
+}
+
+.input-with-suggestions > .item-suggestions {
+    background-color: white;
+    border-radius: map-get($borderRadii, "s");
+    box-shadow: 0 3px 15px rgba(map-get($colors, 'black'), .1);
+    left: 0;
+    max-height: 200px;
+    min-width: 200px;
+    overflow-y: auto;
+    position: absolute;
+    top: 40px;
+    z-index: 15;
+}
+
+.input-with-suggestions.input-with-suggestions--inline {
+    display: inline;
+}
+
+.input-with-suggestions.input-with-suggestions--inline > .item-suggestions {
+    top: map-get($spacing, "l");
+    width: 100%;
+}
+
+.input-with-suggestions.input-with-suggestions--inline > .input-with-suggestions-input {
+    background-color: map-get($colors, "grey-xl");
+    border: none;
+    display: inline;
+    font-size: inherit;
+    height: map-get($spacing, "l");
+    line-height: map-get($spacing, "l");
+    padding-left: map-get($spacing, "s");
+    padding-right: map-get($spacing, "s");
+    width: 100%;
+}
+
+.input-with-suggestions.input-with-suggestions--inline > .input-with-suggestions-input.input-with-suggestions-input--any {
+    background-image: image_url('select-arrow.png');
+    background-position: 100% center;
+    background-repeat: no-repeat;
+    background-size: map-get($spacing, "m") map-get($spacing, "xs");
+}

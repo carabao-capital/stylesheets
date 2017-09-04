@@ -1,0 +1,107 @@
+.attachment {
+    padding: map-get($spacing, "m");
+    cursor: pointer;
+    border-radius: map-get($borderRadii, "m");
+    text-align: center;
+}
+
+.attachment:hover {
+    background-color: rgba(map-get($colors, "black"), 0.1);
+}
+
+.attachment-name {
+  font-size: map-get($fontSizes, "s");
+  width: 100%;
+  display: block;
+  margin-bottom: map-get($spacing, "xs");
+  text-overflow: ellipsis;
+}
+
+.attachment-date {
+  color: map-get($colors, "grey");
+  font-size: map-get($fontSizes, "xs");
+  font-family: 'Averta-Light';
+  font-weight: normal;
+}
+
+.attachment-type {
+  color: map-get($colors, "grey-d");
+  font-size: map-get($fontSizes, "xs");
+  font-family: 'Averta-Light';
+  font-weight: normal;
+  text-overflow: ellipsis;
+}
+
+.attachment-actions {
+  top: map-get($spacing, "m");
+  right: map-get($spacing, "m");
+  z-index: 10;
+  display: flex;
+  position: absolute;
+}
+
+.attachment-action {
+  width: map-get($spacing, "m");
+  height: map-get($spacing, "m");
+  margin-left: map-get($spacing, "s");
+  cursor: pointer;
+  border-radius: map-get($borderRadii, "s");
+  box-shadow: 0 2px 10px rgba(map-get($colors, "black"), .1);
+  display: inline-block;
+  background-color: white;
+  background-position: 0 0;
+  background-size: 75px map-get($spacing, "m");
+  background-image: image_url("attachment-actions.png");
+  opacity: 08;
+}
+
+.attachment-action:hover {
+    opacity: 1;
+}
+
+.attachment-action-zoom {
+    background-position: -24px 0;
+}
+
+.attachment .file {
+  width: map-get($spacing, "xxxxl");
+  height: 100px;
+  margin-bottom: map-get($spacing, "m");
+  background-size: 320px 100px;
+  background-size: cover;
+  display: inline-block;
+  background-image: image_url("file_types.png");
+}
+
+.attachment .file.file-png {
+    background-position: -80px 0;
+}
+.attachment .file.file-jpg,
+.attachment .file.file-jpeg {
+    background-position: -160px 0;
+}
+.attachment .file.file-pdf {
+    background-position: -240px 0;
+}
+
+// attachment small modifier
+.attachment.attachment-s {
+  position: relative;
+  padding: map-get($spacing, "s");
+  padding-left: map-get($spacing, "xxl");
+  text-align: left;
+}
+
+.attachment.attachment-s .attachment-name {
+  margin-bottom: 0;
+}
+
+.attachment.attachment-s .file {
+  position: absolute;
+  left: 11px;
+  top: 11px;
+  width: 28px;
+  height: 35px;
+  background-size: 112px 35px;
+  background-position: -56px 0;
+}

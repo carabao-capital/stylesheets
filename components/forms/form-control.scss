@@ -1,0 +1,61 @@
+.Checkbox,
+.Radio,
+.checkbox,
+.radio {
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.Checkbox > input,
+.Radio > input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.Checkbox > input ~ div,
+.Radio > input ~ div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:  map-get($spacing, "xm");
+  height: map-get($spacing, "xm");
+  line-height: map-get($spacing, "xm");
+  background-color: map-get($colors, "white");
+  border: 1px solid map-get($colors, "grey-l");
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  border-radius: map-get($borderRadii, "s");
+  transition: all 100ms ease;
+  margin-right: map-get($spacing, "s");
+}
+
+/* Hover state*/
+.Checkbox:hover > input ~ div,
+.Radio:hover > input ~ div {
+  box-shadow: 0 4px 6px rgba(32,52,61,.05), 0 1px 3px rgba(0,0,0,.05);
+  border-color: map-get($colors, "grey");
+}
+
+/* Checked state */
+.Checkbox > input:checked ~ div,
+.Radio > input:checked ~ div {
+  color: map-get($colors, "white");
+  background-color: map-get($colors, "blue");
+  border-color: map-get($colors, "blue");
+  box-shadow: 0 7px 14px rgba(32,52,61,.05), 0 3px 6px rgba(0,0,0,.05);
+}
+
+/* Radio modifiers */
+.Radio input ~ div {
+  border-radius: 50%;
+}
+
+.Radio input ~ div > div {
+  width: 6px;
+  height: 6px;
+  background: map-get($colors, "white");
+  border-radius: 50%;
+}

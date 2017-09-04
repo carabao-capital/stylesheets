@@ -1,0 +1,5 @@
+.attachments-list .attachment {
+    padding-top: map-get($spacing, "xs");
+    padding-bottom: map-get($spacing, "xs");
+    border-bottom: 1px solid map-get($colors, "grey-xl");
+}

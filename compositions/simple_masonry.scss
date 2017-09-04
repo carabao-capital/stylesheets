@@ -1,0 +1,10 @@
+.simple-masonry {
+  column-gap: 3em;
+
+  &.three { column-count: 3; }
+
+  > .cellblock {
+    display: inline-block;
+    width: 100%;
+  }
+}

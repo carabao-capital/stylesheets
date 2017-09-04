@@ -1,0 +1,120 @@
+@each $size, $value in $spacing {
+  .marginTop-#{$size} { margin-top: $value; }
+  .marginLeft-#{$size} { margin-left: $value; }
+  .marginRight-#{$size} { margin-right: $value; }
+  .marginBottom-#{$size} { margin-bottom: $value; }
+}
+
+@each $percent in $percentages {
+  .marginTop-#{$percent}p { margin-top: #{$percent * 1%} }
+  .marginLeft-#{$percent}p { margin-left: #{$percent * 1%} }
+  .marginRight-#{$percent}p { margin-right: #{$percent * 1%} }
+  .marginBottom-#{$percent}p { margin-bottom: #{$percent * 1%} }
+}
+
+.margin-auto { margin: auto; }
+.marginLeft-auto { margin-left: auto; }
+.marginRight-auto { margin-right: auto; }
+.marginTop-auto { margin-top: auto; }
+.marginBottom-auto { margin-bottom: auto; }
+
+.marginTop-none { margin-top: 0; }
+.marginLeft-none { margin-left: 0; }
+.marginRight-none { margin-right: 0; }
+.marginBottom-none { margin-bottom: 0; }
+
+@include bp1 {
+  @each $size, $value in $spacing {
+    .bp1-marginTop-#{$size} { margin-top: $value; }
+    .bp1-marginLeft-#{$size} { margin-left: $value; }
+    .bp1-marginRight-#{$size} { margin-right: $value; }
+    .bp1-marginBottom-#{$size} { margin-bottom: $value; }
+  }
+
+  @each $percent in $percentages {
+    .bp1-marginTop-#{$percent}p { margin-top: #{$percent * 1%} }
+    .bp1-marginLeft-#{$percent}p { margin-left: #{$percent * 1%} }
+    .bp1-marginRight-#{$percent}p { margin-right: #{$percent * 1%} }
+    .bp1-marginBottom-#{$percent}p { margin-bottom: #{$percent * 1%} }
+  }
+
+  .bp1-marginLeft-auto { margin-left: auto; }
+  .bp1-marginRight-auto { margin-right: auto; }
+
+  .bp1-marginTop-none { margin-top: 0; }
+  .bp1-marginLeft-none { margin-left: 0; }
+  .bp1-marginRight-none { margin-right: 0; }
+  .bp1-marginBottom-none { margin-bottom: 0; }
+}
+
+@include bp2 {
+  @each $size, $value in $spacing {
+    .bp2-marginTop-#{$size} { margin-top: $value; }
+    .bp2-marginLeft-#{$size} { margin-left: $value; }
+    .bp2-marginRight-#{$size} { margin-right: $value; }
+    .bp2-marginBottom-#{$size} { margin-bottom: $value; }
+  }
+
+  @each $percent in $percentages {
+    .bp2-marginTop-#{$percent}p { margin-top: #{$percent * 1%} }
+    .bp2-marginLeft-#{$percent}p { margin-left: #{$percent * 1%} }
+    .bp2-marginRight-#{$percent}p { margin-right: #{$percent * 1%} }
+    .bp2-marginBottom-#{$percent}p { margin-bottom: #{$percent * 1%} }
+  }
+
+  .bp2-marginLeft-auto { margin-left: auto; }
+  .bp2-marginRight-auto { margin-right: auto; }
+
+  .bp2-marginTop-none { margin-top: 0; }
+  .bp2-marginLeft-none { margin-left: 0; }
+  .bp2-marginRight-none { margin-right: 0; }
+  .bp2-marginBottom-none { margin-bottom: 0; }
+}
+
+@include bp3 {
+  @each $size, $value in $spacing {
+    .bp3-marginTop-#{$size} { margin-top: $value; }
+    .bp3-marginLeft-#{$size} { margin-left: $value; }
+    .bp3-marginRight-#{$size} { margin-right: $value; }
+    .bp3-marginBottom-#{$size} { margin-bottom: $value; }
+  }
+
+  @each $percent in $percentages {
+    .bp3-marginTop-#{$percent}p { margin-top: #{$percent * 1%} }
+    .bp3-marginLeft-#{$percent}p { margin-left: #{$percent * 1%} }
+    .bp3-marginRight-#{$percent}p { margin-right: #{$percent * 1%} }
+    .bp3-marginBottom-#{$percent}p { margin-bottom: #{$percent * 1%} }
+  }
+
+  .bp3-marginLeft-auto { margin-left: auto; }
+  .bp3-marginRight-auto { margin-right: auto; }
+
+  .bp3-marginTop-none { margin-top: 0; }
+  .bp3-marginLeft-none { margin-left: 0; }
+  .bp3-marginRight-none { margin-right: 0; }
+  .bp3-marginBottom-none { margin-bottom: 0; }
+}
+
+@include bp4 {
+  @each $size, $value in $spacing {
+    .bp4-marginTop-#{$size} { margin-top: $value; }
+    .bp4-marginLeft-#{$size} { margin-left: $value; }
+    .bp4-marginRight-#{$size} { margin-right: $value; }
+    .bp4-marginBottom-#{$size} { margin-bottom: $value; }
+  }
+
+  @each $percent in $percentages {
+    .bp4-marginTop-#{$percent}p { margin-top: #{$percent * 1%} }
+    .bp4-marginLeft-#{$percent}p { margin-left: #{$percent * 1%} }
+    .bp4-marginRight-#{$percent}p { margin-right: #{$percent * 1%} }
+    .bp4-marginBottom-#{$percent}p { margin-bottom: #{$percent * 1%} }
+  }
+
+  .bp4-marginLeft-auto { margin-left: auto; }
+  .bp4-marginRight-auto { margin-right: auto; }
+
+  .bp4-marginTop-none { margin-top: 0; }
+  .bp4-marginLeft-none { margin-left: 0; }
+  .bp4-marginRight-none { margin-right: 0; }
+  .bp4-marginBottom-none { margin-bottom: 0; }
+}

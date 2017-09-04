@@ -1,0 +1,3 @@
+@each $percent in $percentages {
+  .maxWidth-#{$percent}p { max-width: #{$percent * 1%} }
+}

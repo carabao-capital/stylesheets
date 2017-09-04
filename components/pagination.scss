@@ -1,0 +1,19 @@
+.pagination {
+    margin-top: map-get($spacing, "xs");
+}
+
+.pagination a {
+    display: inline-block;
+    color: map-get($colors, 'grey');
+    padding: map-get($spacing, "xs");
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    color: map-get($colors, 'black');
+}
+
+.pagination .current {
+    color: map-get($colors, 'blue');
+    padding: map-get($spacing, "xs");
+}

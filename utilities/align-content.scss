@@ -1,0 +1,42 @@
+.alignContent-flexStart           { align-content: flex-start; }
+.alignContent-flexEnd             { align-content: flex-end; }
+.alignContent-center              { align-content: center; }
+.alignContent-between             { align-content: space-between; }
+.alignContent-around              { align-content: space-around; }
+.alignContent-stretch             { align-content: stretch; }
+
+@include bp1 {
+    .bp1-alignContent-flexStart           { align-content: flex-start; }
+    .bp1-alignContent-flexEnd             { align-content: flex-end; }
+    .bp1-alignContent-center              { align-content: center; }
+    .bp1-alignContent-between             { align-content: space-between; }
+    .bp1-alignContent-around              { align-content: space-around; }
+    .bp1-alignContent-stretch             { align-content: stretch; }
+}
+
+@include bp2 {
+    .bp2-alignContent-flexStart           { align-content: flex-start; }
+    .bp2-alignContent-flexEnd             { align-content: flex-end; }
+    .bp2-alignContent-center              { align-content: center; }
+    .bp2-alignContent-between             { align-content: space-between; }
+    .bp2-alignContent-around              { align-content: space-around; }
+    .bp2-alignContent-stretch             { align-content: stretch; }
+}
+
+@include bp3 {
+    .bp3-alignContent-flexStart           { align-content: flex-start; }
+    .bp3-alignContent-flexEnd             { align-content: flex-end; }
+    .bp3-alignContent-center              { align-content: center; }
+    .bp3-alignContent-between             { align-content: space-between; }
+    .bp3-alignContent-around              { align-content: space-around; }
+    .bp3-alignContent-stretch             { align-content: stretch; }
+}
+
+@include bp4 {
+    .bp4-alignContent-flexStart           { align-content: flex-start; }
+    .bp4-alignContent-flexEnd             { align-content: flex-end; }
+    .bp4-alignContent-center              { align-content: center; }
+    .bp4-alignContent-between             { align-content: space-between; }
+    .bp4-alignContent-around              { align-content: space-around; }
+    .bp4-alignContent-stretch             { align-content: stretch; }
+}

@@ -1,0 +1,15 @@
+.expand-toggle {
+    background-image: linear-gradient(rgba(white, 0), rgba(white, 1));
+    bottom: 0;
+    color: map-get($colors, 'blue');
+    height: 60px;
+    left: 0;
+    line-height: 100px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.expand-toggle--off {
+    background-image: none;
+}

@@ -1,0 +1,64 @@
+.connect-account {
+  @extend .Button;
+  width: 100%;
+  height: map-get($spacing, "xl");
+  text-align: left;
+  line-height: 40px;
+  position: relative;
+  padding-left: map-get($spacing, "xl");
+
+  &:before {
+    content: '';
+    top: map-get($spacing, "xs");
+    left: map-get($spacing, "xs");
+    width: map-get($spacing, "m");
+    height: map-get($spacing, "m");
+    display: block;
+    position: absolute;
+    background-position: 0 0;
+    background-size: 192px 24px;
+    background-image: image_url('connected-accounts.png');
+  }
+}
+
+.connect-account-globe {
+  background-color: #005AB0;
+  &:hover { background-color: darken(#005AB0, 5); }
+  &:before { background-position: -96px; }
+}
+
+.connect-account-linkedin {
+  background-color: #0177B5;
+  &:hover { background-color: darken(#0177B5, 5); }
+  &:before { background-position: -24px; }
+}
+
+.connect-account-facebook {
+  background-color: #3B5998;
+  &:hover { background-color: darken(#3B5998, 5); }
+  &:before { background-position: -48px; }
+}
+
+.connect-account-instagram {
+  background-color: #E6456B;
+  &:hover { background-color: darken(#E6456B, 5); }
+  &:before { background-position: -72px; }
+}
+
+.connect-account-google_oauth2 {
+  background-color: #4285f4;
+  &:hover { background-color: darken(#4285f4, 5); }
+  &:before { background-position: -120px; }
+}
+
+.connect-account-yahoo_oauth2 {
+  background-color: #410093;
+  &:hover { background-color: darken(#410093, 5); }
+  &:before { background-position: -144px; }
+}
+
+.connect-account-connected {
+  opacity: 0.5;
+  cursor: default;
+  &:before { background-position: -168px; }
+}

@@ -1,0 +1,7 @@
+// Box Shadow
+.boxShadow-xl { box-shadow: 0 3px 20px rgba(map-get($colors, 'black'), .2); }
+.boxShadow-l { box-shadow: 0 3px 15px rgba(map-get($colors, 'black'), .1); }
+.boxShadow-m { box-shadow: 0 2px 10px rgba(map-get($colors, 'black'), .1); }
+.boxShadow-s { box-shadow: 0 1px 5px rgba(map-get($colors, 'black'), .1); }
+.boxShadow-xs { box-shadow: 0 1px 1px rgba(map-get($colors, 'black'), .1); }
+.boxShadow-none { box-shadow: none; }

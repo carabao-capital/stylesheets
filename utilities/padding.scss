@@ -1,0 +1,108 @@
+// paddings
+@each $size, $value in $spacing {
+  .padding-#{$size} { padding: $value }
+  .padding-#{$size}-0 { padding: $value 0 }
+  .padding-0-#{$size} { padding: 0 $value }
+}
+
+@each $size, $value in $spacing {
+  .paddingLeft-#{$size} { padding-left: $value }
+  .paddingRight-#{$size} { padding-right: $value }
+  .paddingTop-#{$size} { padding-top: $value }
+  .paddingBottom-#{$size} { padding-bottom: $value }
+}
+
+@each $percent in $percentages {
+  .paddingTop-#{$percent}p { padding-top: #{$percent * 1%} }
+  .paddingLeft-#{$percent}p { padding-left: #{$percent * 1%} }
+  .paddingRight-#{$percent}p { padding-right: #{$percent * 1%} }
+  .paddingBottom-#{$percent}p { padding-bottom: #{$percent * 1%} }
+}
+
+@include bp1 {
+    @each $size, $value in $spacing {
+      .bp1-padding-#{$size} { padding: $value }
+      .bp1-padding-#{$size}-0 { padding: $value 0 }
+      .bp1-padding-0-#{$size} { padding: 0 $value }
+    }
+
+    @each $size, $value in $spacing {
+      .bp1-paddingLeft-#{$size} { padding-left: $value }
+      .bp1-paddingRight-#{$size} { padding-right: $value }
+      .bp1-paddingTop-#{$size} { padding-top: $value }
+      .bp1-paddingBottom-#{$size} { padding-bottom: $value }
+    }
+
+    @each $percent in $percentages {
+      .bp1-paddingTop-#{$percent}p { padding-top: #{$percent * 1%} }
+      .bp1-paddingLeft-#{$percent}p { padding-left: #{$percent * 1%} }
+      .bp1-paddingRight-#{$percent}p { padding-right: #{$percent * 1%} }
+      .bp1-paddingBottom-#{$percent}p { padding-bottom: #{$percent * 1%} }
+    }
+}
+
+@include bp2 {
+  @each $size, $value in $spacing {
+    .bp2-padding-#{$size} { padding: $value }
+    .bp2-padding-#{$size}-0 { padding: $value 0 }
+    .bp2-padding-0-#{$size} { padding: 0 $value }
+  }
+
+  @each $size, $value in $spacing {
+    .bp2-paddingLeft-#{$size} { padding-left: $value }
+    .bp2-paddingRight-#{$size} { padding-right: $value }
+    .bp2-paddingTop-#{$size} { padding-top: $value }
+    .bp2-paddingBottom-#{$size} { padding-bottom: $value }
+  }
+
+  @each $percent in $percentages {
+    .bp2-paddingTop-#{$percent}p { padding-top: #{$percent * 1%} }
+    .bp2-paddingLeft-#{$percent}p { padding-left: #{$percent * 1%} }
+    .bp2-paddingRight-#{$percent}p { padding-right: #{$percent * 1%} }
+    .bp2-paddingBottom-#{$percent}p { padding-bottom: #{$percent * 1%} }
+  }
+}
+
+@include bp3 {
+  @each $size, $value in $spacing {
+    .bp3-padding-#{$size} { padding: $value }
+    .bp3-padding-#{$size}-0 { padding: $value 0 }
+    .bp3-padding-0-#{$size} { padding: 0 $value }
+  }
+
+  @each $size, $value in $spacing {
+    .bp3-paddingLeft-#{$size} { padding-left: $value }
+    .bp3-paddingRight-#{$size} { padding-right: $value }
+    .bp3-paddingTop-#{$size} { padding-top: $value }
+    .bp3-paddingBottom-#{$size} { padding-bottom: $value }
+  }
+
+  @each $percent in $percentages {
+    .bp3-paddingTop-#{$percent}p { padding-top: #{$percent * 1%} }
+    .bp3-paddingLeft-#{$percent}p { padding-left: #{$percent * 1%} }
+    .bp3-paddingRight-#{$percent}p { padding-right: #{$percent * 1%} }
+    .bp3-paddingBottom-#{$percent}p { padding-bottom: #{$percent * 1%} }
+  }
+}
+
+@include bp4 {
+  @each $size, $value in $spacing {
+    .bp4-padding-#{$size} { padding: $value }
+    .bp4-padding-#{$size}-0 { padding: $value 0 }
+    .bp4-padding-0-#{$size} { padding: 0 $value }
+  }
+
+  @each $size, $value in $spacing {
+    .bp4-paddingLeft-#{$size} { padding-left: $value }
+    .bp4-paddingRight-#{$size} { padding-right: $value }
+    .bp4-paddingTop-#{$size} { padding-top: $value }
+    .bp4-paddingBottom-#{$size} { padding-bottom: $value }
+  }
+
+  @each $percent in $percentages {
+    .bp4-paddingTop-#{$percent}p { padding-top: #{$percent * 1%} }
+    .bp4-paddingLeft-#{$percent}p { padding-left: #{$percent * 1%} }
+    .bp4-paddingRight-#{$percent}p { padding-right: #{$percent * 1%} }
+    .bp4-paddingBottom-#{$percent}p { padding-bottom: #{$percent * 1%} }
+  }
+}

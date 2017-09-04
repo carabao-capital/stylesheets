@@ -1,0 +1,97 @@
+.display-none   { display: none; }
+.display-block { display: block; }
+.display-flex { display: flex; }
+.display-inline { display: inline; }
+.display-inlineFlex { display: inline-flex; }
+
+// This naming convention is incorrect
+.display-inline-block { display: inline-block; }
+
+.display-inlineTable  { display: inline-table; }
+.display-table  { display: table; }
+
+// This naming convention is incorrect
+.display-table-cell { display: table-cell; }
+
+.display-tableColumn  { display: table-column; }
+.display-tableRow   { display: table-row; }
+
+@include mobile {
+  .mobile-display-none   { display: none; }
+  .mobile-display-block { display: block; }
+  .mobile-display-flex { display: flex; }
+  .mobile-display-inline { display: inline; }
+  .mobile-display-inlineFlex { display: inline-flex; }
+
+  // This naming convention is incorrect
+  .mobile-display-inline-block { display: inline-block; }
+
+  .mobile-display-inlineTable  { display: inline-table; }
+  .mobile-display-table  { display: table; }
+
+  // This naming convention is incorrect
+  .mobile-display-table-cell { display: table-cell; }
+
+  .mobile-display-tableColumn  { display: table-column; }
+  .mobile-display-tableRow   { display: table-row; }
+}
+
+@include bp2 {
+  .bp2-display-none   { display: none; }
+  .bp2-display-block { display: block; }
+  .bp2-display-flex { display: flex; }
+  .bp2-display-inline { display: inline; }
+  .bp2-display-inlineFlex { display: inline-flex; }
+
+  // This naming convention is incorrect
+  .bp2-display-inline-block { display: inline-block; }
+
+  .bp2-display-inlineTable  { display: inline-table; }
+  .bp2-display-table  { display: table; }
+
+  // This naming convention is incorrect
+  .bp2-display-table-cell { display: table-cell; }
+
+  .bp2-display-tableColumn  { display: table-column; }
+  .bp2-display-tableRow   { display: table-row; }
+}
+
+@include bp3 {
+  .bp3-display-none   { display: none; }
+  .bp3-display-block { display: block; }
+  .bp3-display-flex { display: flex; }
+  .bp3-display-inline { display: inline; }
+  .bp3-display-inlineFlex { display: inline-flex; }
+
+  // This naming convention is incorrect
+  .bp3-display-inline-block { display: inline-block; }
+
+  .bp3-display-inlineTable  { display: inline-table; }
+  .bp3-display-table  { display: table; }
+
+  // This naming convention is incorrect
+  .bp3-display-table-cell { display: table-cell; }
+
+  .bp3-display-tableColumn  { display: table-column; }
+  .bp3-display-tableRow   { display: table-row; }
+}
+
+@include bp4 {
+  .bp4-display-none   { display: none; }
+  .bp4-display-block { display: block; }
+  .bp4-display-flex { display: flex; }
+  .bp4-display-inline { display: inline; }
+  .bp4-display-inlineFlex { display: inline-flex; }
+
+  // This naming convention is incorrect
+  .bp4-display-inline-block { display: inline-block; }
+
+  .bp4-display-inlineTable  { display: inline-table; }
+  .bp4-display-table  { display: table; }
+
+  // This naming convention is incorrect
+  .bp4-display-table-cell { display: table-cell; }
+
+  .bp4-display-tableColumn  { display: table-column; }
+  .bp4-display-tableRow   { display: table-row; }
+}

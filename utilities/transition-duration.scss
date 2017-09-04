@@ -1,0 +1,3 @@
+@each $transitionDuration, $value in $transitionDurations {
+  .transitionDuration-#{$transitionDuration} { transition-duration: $value }
+}

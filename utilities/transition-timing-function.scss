@@ -1,0 +1,4 @@
+// transition timing function
+.transitionTimingFunction-linear { transition-timing-function: linear; }
+.transitionTimingFunction-ease { transition-timing-function: ease; }
+.transitionTimingFunction-spring { transition-timing-function: cubic-bezier(.2, 0, 0, 1.4); }

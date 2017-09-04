@@ -1,0 +1,27 @@
+.merge-lead-cards {
+    overflow: auto;
+    width: 100%;
+}
+
+.merge-lead-cards-inner {
+    display: flex;
+    width: auto;
+}
+
+.merge-lead-card {
+    background-color: white;
+    border-color: map-get($colors, "grey")-l;
+    border-radius: map-get($borderRadii, "s");
+    border-style: solid;
+    border-width: 1px;
+    margin-right: map-get($spacing, "m");
+    padding: map-get($spacing, "s");
+    transition-duration: map-get($transitionDurations, "s");
+    transition-property: all;
+    transition-timing-function: ease;
+}
+
+.merge-lead-card.merge-lead-card--selected {
+    border-color: map-get($colors, "blue");
+    box-shadow: 0 3px 20px rgba(map-get($colors, "black"), .2);
+}

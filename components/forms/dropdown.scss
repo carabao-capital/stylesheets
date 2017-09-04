@@ -1,0 +1,48 @@
+.Dropdown {
+    background-color: map-get($colors, "white");
+    border-radius: map-get($borderRadii, "s");
+    min-width: 160px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: -999999px;
+    transform: translateY(-2px);
+    transition-property: transform, opacity;
+    transition-duration: map-get($transitionDurations, "s");
+    transition-timing-function: cubic-bezier(0.46, 0.07, 0.13, 1.37);
+    z-index: 9999;
+}
+
+.Dropdown.leftAligned {
+    left: 0;
+    right: auto;
+}
+
+// Display the dropdown
+.Dropdown.active {
+    box-shadow:
+        0 2px 30px rgba(map-get($colors, "gray900"), 0.12),
+        0 20px 12px -12px rgba(map-get($colors, "gray900"), 0.08);
+    opacity: 1;
+    top: 100%;
+    transform: translateY(0);
+}
+
+.Dropdown.basic > ul > li:not(.ListItem) > a {
+    font-size: 1.4rem;
+    line-height: 20px;
+    display: flex;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    min-height: 3.2rem;
+    align-items: center;
+    transition: all 100ms linear;
+}
+
+.Dropdown.basic > ul > li > a:hover {
+   background-color: map-get($colors, "grey-xl");
+   cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.file-input-button {
+  @extend .button;
+  @extend .-primary;
+  overflow: hidden;
+  position: relative;
+}
+
+.file-input-button.-disabled {
+  @extend .button;
+}
+
+.file-input-button .file-input {
+  cursor: inherit;
+  filter: alpha(opacity=0);
+  height: 100%;
+  // Use opacity for the element to be clickable
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}

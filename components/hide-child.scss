@@ -1,0 +1,13 @@
+.HideChild {
+    position: relative;
+}
+
+.HideChild .HideChild-target {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.HideChild:hover .HideChild-target {
+    opacity: 1;
+    visibility: visible;
+}

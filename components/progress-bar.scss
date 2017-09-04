@@ -1,0 +1,83 @@
+// TODO: fix me
+.progress-container {
+  display: flex;
+  align-items: center;
+  padding: map-get($spacing, "s") 0;
+
+  & > .progress-bar {
+    width: 90%;
+  }
+  & > .info {
+    text-align: center;
+    width: 10%;
+  }
+
+  &.-full {
+    position: relative;
+    height: map-get($spacing, 'l');
+    padding: 0;
+
+    & > .progress-bar {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+    & > .info {
+      width: 100%;
+      position: absolute;
+      text-align: center;
+    }
+  }
+
+  &.-max-width {
+    flex-direction: column;
+
+    & > .progress-bar {
+      width: 100%;
+      margin-bottom: map-get($spacing, 's');
+    }
+
+    & > .info {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &.-small {
+    width:  map-get($spacing, 'xxxxl');
+    padding: map-get($spacing, 's');
+
+    & > .progress-bar {
+      height: map-get($spacing, 'xm');
+      border-radius: map-get($borderRadii, 's');
+    }
+
+    & > .info {
+      font-size: map-get($fontSizes, 'xxxs');
+    }
+  }
+
+  @include mobile {
+    & > .progress-bar { width: 100%; }
+    //& > .info { display: none; }
+  }
+}
+
+.progress-bar {
+  background-color: map-get($colors, 'gray100');
+  border-radius: map-get($borderRadii, "rounded");
+  display: inline-block;
+  height: map-get($spacing, "xm");
+  overflow: hidden;
+  width: 100%;
+}
+
+.progress-bar > .current-progress {
+  width: 0;
+  height: 100%;
+  background-color: map-get($colors, 'blue500');
+
+  &.-positive { background-color: map-get($colors, 'green'); }
+  &.-negative { background-color: map-get($colors, 'red500'); }
+  &.-warning { background-color: map-get($colors, 'yellow500'); }
+}

@@ -1,0 +1,24 @@
+.buckets.buckets--dragging {
+    cursor: grabbing;
+}
+
+.bucket {
+    position: relative;
+    flex-basis: 400px;
+    max-width: 400px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-right: 1px solid map-get($colors, "gray200");
+}
+
+.bucket-items--loading::after {
+    content: "";
+    width: map-get($spacing, "m");
+    height: map-get($spacing, "m");
+    display: block;
+    margin: map-get($spacing, "m") auto;
+    background-size: map-get($spacing, "m") map-get($spacing, "m");
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    background-image: image_url("loaders/loading-grey-l.gif");
+}

@@ -1,0 +1,63 @@
+.select-multiple .select-multiple-item {
+    align-items: center;
+    background-color: map-get($colors, "gray200");
+    border-radius: map-get($borderRadii, "rounded");
+    color: map-get($colors, "gray900");
+    display: inline-flex;
+    font-size: map-get($fontSizes, 'xs');
+    height: map-get($spacing, "m");
+    margin-bottom: map-get($spacing, "xs");
+    margin-right: map-get($spacing, "s");
+    margin-top: map-get($spacing, "xs");
+    max-width: 100%;
+    padding-left: map-get($spacing, "s");
+    padding-right: map-get($spacing, "m");
+    position: relative;
+    text-overflow: ellipsis;
+}
+
+.select-multiple .select-multiple-item.select-multiple-item--clickable {
+    cursor: pointer;
+}
+
+.select-multiple .select-multiple-item.select-multiple-item--clickable:hover {
+    background-color: map-get($colors, "yellow");
+}
+
+.select-multiple .select-multiple-tag {
+    padding-left: map-get($spacing, "s");
+}
+
+.select-multiple.select-multiple-editable .select-multiple-item {
+    padding-right: map-get($spacing, "l");
+}
+
+.select-multiple.select-multiple-editable .select-multiple-item .remove {
+    background-size: 8px 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: image_url('remove.svg');
+    cursor: pointer;
+    height: 100%;
+    margin-left: map-get($spacing, "xs");
+    position: absolute;
+    right: 4px;
+    top: 0;
+    width: map-get($spacing, "m");
+}
+
+.select-multiple.select-multiple-editable .select-multiple-item .remove:hover {
+    opacity: 1;
+}
+
+.select-multiple .input-with-suggestions {
+    display: inline-block;
+    width: 100px;
+}
+
+.select-multiple input[type=text] {
+    background-color: transparent;
+    border: none;
+    height: 31px;
+    padding: 0;
+}

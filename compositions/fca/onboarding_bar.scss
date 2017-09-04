@@ -1,0 +1,105 @@
+// Used to display a row of steps during a setup or onboarding process
+//
+.onboarding-bar {
+  text-align: center;
+  background-color: white;
+  padding-top: map-get($spacing, "m");
+  padding-left: map-get($spacing, "m");
+  padding-right: map-get($spacing, "m");
+  padding-bottom: map-get($spacing, "m");
+  border-top: 1px solid map-get($colors, 'grey-xl');
+  box-shadow: 0 1px 1px rgba(map-get($colors, 'black'), 0.1);
+
+  @include mobile {
+    box-shadow: none;
+    padding-top: map-get($spacing, "xxl");
+    background-color: transparent;
+  }
+
+  .step {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: white;
+    color: map-get($colors, 'grey');
+    font-size: map-get($fontSizes, 's');
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+    @include mobile {
+      margin: map-get($spacing, "xs");
+      width: map-get($spacing, "m");
+      height: map-get($spacing, "m");
+      border-radius: map-get($borderRadii, "round");
+      color: transparent;
+      position: relative;
+      background-color: map-get($colors, 'grey-l');
+    }
+  }
+
+  .step.active, .step.complete, li.active > a {
+    color: map-get($colors, "brand");
+    @include mobile { color: transparent; }
+  }
+
+  .step.active {
+    @include mobile { background-color: map-get($colors, 'brand'); }
+  }
+
+  .step::before {
+    content: "";
+    width: 24px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: bottom;
+    background-position: 0 0;
+    background-size: 20px 60px;
+    background-repeat: no-repeat;
+    margin-right: map-get($spacing, 's');
+    background-image: image_url("checkmarks.png");
+    @include mobile { display: none; }
+  }
+
+  .step.active::before { background-position: 0 -20px; }
+  .step.complete::before { background-position: 0 -40px; }
+
+  .step::after {
+    content: "";
+    z-index: 0;
+    width: map-get($spacing, "xxl");
+    height: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: map-get($spacing, 'l');
+    margin-right: map-get($spacing, 'l');
+    background-color: map-get($colors, 'grey-l');
+
+    @include mobile {
+      margin: auto;
+      left: 0;
+      top: 7px;
+      width: 100%;
+      height: auto;
+      color: white;
+      font-size: map-get($fontSizes, 'xxs');
+      position: absolute;
+      background-color: transparent;
+    }
+  }
+
+  @include mobile {
+    .step:nth-child(1)::after { content: "1" }
+    .step:nth-child(2)::after { content: "2" }
+    .step:nth-child(3)::after { content: "3" }
+    .step:nth-child(4)::after { content: "4" }
+    .step:nth-child(5)::after { content: "5" }
+  }
+
+  .step:last-child::after {
+    display: none;
+    @include mobile { display: inline-block; }
+  }
+}

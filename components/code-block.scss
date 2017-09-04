@@ -1,0 +1,7 @@
+.CodeBlock {
+    padding: map-get($spacing, "xm");
+    overflow: auto;
+    font-size: map-get($fontSizes, 's');
+    color: map-get($colors, "gray500");
+    line-height: 20px;
+}

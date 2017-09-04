@@ -1,0 +1,13 @@
+.list-document{
+  height: 240px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  > li{
+    border-bottom: 1px solid map-get($colors, "grey-xl");
+
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+}

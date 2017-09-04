@@ -1,0 +1,32 @@
+@each $position in $positions {
+  .right-#{$position} { right: #{$position}px; }
+}
+.right-auto { right: auto; }
+
+@include bp1 {
+  @each $position in $positions {
+    .bp1-right-#{$position} { right: #{$position}px; }
+  }
+  .bp1-right-auto { right: auto; }
+}
+
+@include bp2 {
+  @each $position in $positions {
+    .bp2-right-#{$position} { right: #{$position}px; }
+  }
+  .bp2-right-auto { right: auto; }
+}
+
+@include bp3 {
+  @each $position in $positions {
+    .bp3-right-#{$position} { right: #{$position}px; }
+  }
+  .bp3-right-auto { right: auto; }
+}
+
+@include bp4 {
+  @each $position in $positions {
+    .bp4-right-#{$position} { right: #{$position}px; }
+  }
+  .bp4-right-auto { right: auto; }
+}

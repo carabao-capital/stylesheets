@@ -1,0 +1,9 @@
+.requirements-summary{
+  display: flex;
+  padding: map-get($spacing, 'xm');
+
+  @include mobile {
+    text-align: center;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,11 @@
+ul.list li {
+    border-bottom: 1px solid map-get($colors, 'grey-xl');
+    padding-bottom: map-get($spacing, "xm");
+    padding-left: map-get($spacing, "xm");
+    padding-right: map-get($spacing, "xm");
+    padding-top: map-get($spacing, "xm");
+}
+
+ul.list li:last-child {
+    border-bottom: 0;
+}

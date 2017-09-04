@@ -1,0 +1,45 @@
+.Asset {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Asset.size1 {
+    width: map-get($spacing, 's');
+    height: map-get($spacing, 's');
+}
+
+.Asset.size2 {
+    width: map-get($spacing, 'xm');
+    height: map-get($spacing, 'xm');
+}
+
+.Asset.size3 {
+    width: map-get($spacing, 'm');
+    height: map-get($spacing, 'm');
+}
+
+.Asset.size4 {
+    width: map-get($spacing, 'l');
+    height: map-get($spacing, 'l');
+}
+
+.Asset.size5 {
+    width: map-get($spacing, 'xl');
+    height: map-get($spacing, 'xl');
+}
+
+.Asset.size6 {
+    width: map-get($spacing, 'xxl');
+    height: map-get($spacing, 'xxl');
+}
+
+.Asset.size7 {
+    width: map-get($spacing, 'xxxl');
+    height: map-get($spacing, 'xxxl');
+}
+
+.Asset.size8 {
+    width: map-get($spacing, 'xxxxl');
+    height: map-get($spacing, 'xxxxl');
+}

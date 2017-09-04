@@ -1,0 +1,13 @@
+$breakpoints: (
+  "mobile": "only screen and (max-width: 900px)",
+  "desktop": "only screen and (min-width: 900px)",
+
+  "phone": "only screen and (min-width: 38em)",
+  "tablet": "only screen and (min-width: 62em)",
+  "laptop": "only screen and (min-width: 68em)",
+
+  "bp1": "only screen and (min-width: 38em)",
+  "bp2": "only screen and (min-width: 62em)",
+  "bp3": "only screen and (min-width: 68em)",
+  "bp4": "only screen and (min-width: 110em)",
+);

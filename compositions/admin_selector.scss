@@ -1,0 +1,49 @@
+.admin-selector .selected-admin::after {
+    width: 0;
+    height: 0;
+    content: '';
+    display: block;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid map-get($colors, "grey");
+}
+
+.admin-selector .selected-admin:hover::after {
+    border-top-color: map-get($colors, "black");
+}
+
+.admin-selector.admin-selector--disabled .selected-admin {
+    cursor: default;
+}
+
+.admin-selector.admin-selector--disabled .selected-admin::after {
+    display: none;
+}
+
+.admin-selector .admin-selection {
+    cursor: default;
+    right: 0;
+    top: map-get($spacing, "xl");
+    position: absolute;
+    width: 280px;
+    box-shadow: 0 3px 15px rgba(map-get($colors, "black"), .1);
+    border-radius: map-get($borderRadii, "s");
+    background-color: white;
+    border: 1px solid rgba(map-get($colors, "black"), .1);
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: map-get($transitionDurations, "m");
+    transition-timing-function: cubic-bezier(.2, 0, 0, 1.4);
+    z-index: 15;
+    font-size: map-get($fontSizes, "s");
+}
+
+.admin-selector.admin-selector-right-aligned .admin-selection {
+    right: 0;
+    left: auto;
+}
+
+.admin-selector.admin-selector--open .admin-selection {
+    opacity: 1;
+    visibility: visible;
+}

@@ -1,0 +1,80 @@
+.bank-account-wizard {
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.bank-account-wizard > .wizard-button {
+  padding: map-get($spacing, "m");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  border-color: map-get($colors, "grey-l");
+  font-size: map-get($fontSizes, "m");
+  color: map-get($colors, "grey");
+
+  &:first-child {
+    padding-left: map-get($spacing, "xm");
+    border-right: none;
+  }
+
+  &:last-child {
+    padding-right: map-get($spacing, "xm");
+    border-left: none;
+  }
+
+  &.current {
+    border-color: map-get($colors, "brand");
+    background-color: map-get($colors, "brand");
+    color: map-get($colors, "white");
+  }
+
+  &.complete {
+    color: map-get($colors, "green");
+  }
+
+  // TODO: put this as separate component
+  & > .step {
+    width: map-get($spacing, "xm");
+    height: map-get($spacing, "xm");
+    border-radius: map-get($borderRadii, "rounded");
+    background-color: map-get($colors, "grey");
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: map-get($fontSizes, "xxs");
+    color: map-get($colors, "white");
+  }
+
+  &.current > .step {
+    background-color: map-get($colors, "white");
+    color: map-get($colors, "brand");
+  }
+
+  &.complete > .step {
+    background-color: map-get($colors, "green");
+    color: map-get($colors, "white");
+  }
+
+  @include mobile {
+    width: 100%;
+
+    &:first-child { padding-left: map-get($spacing, "m"); }
+    &:last-child { padding-right: map-get($spacing, "m"); }
+
+    & > .step {
+      flex-grow: 0;
+      margin-right: map-get($spacing, "m");
+    }
+
+    & > .text { flex-grow: 1; }
+  }
+}

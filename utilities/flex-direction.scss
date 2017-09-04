@@ -1,0 +1,32 @@
+.flexDirection-column              { flex-direction: column; }
+.flexDirection-columnReverse       { flex-direction: column-reverse; }
+.flexDirection-row                 { flex-direction: row; }
+.flexDirection-rowReverse          { flex-direction: row-reverse; }
+
+@include bp1 {
+    .bp1-flexDirection-column              { flex-direction: column; }
+    .bp1-flexDirection-columnReverse       { flex-direction: column-reverse; }
+    .bp1-flexDirection-row                 { flex-direction: row; }
+    .bp1-flexDirection-rowReverse          { flex-direction: row-reverse; }
+}
+
+@include bp2 {
+    .bp2-flexDirection-column              { flex-direction: column; }
+    .bp2-flexDirection-columnReverse       { flex-direction: column-reverse; }
+    .bp2-flexDirection-row                 { flex-direction: row; }
+    .bp2-flexDirection-rowReverse          { flex-direction: row-reverse; }
+}
+
+@include bp3 {
+    .bp3-flexDirection-column              { flex-direction: column; }
+    .bp3-flexDirection-columnReverse       { flex-direction: column-reverse; }
+    .bp3-flexDirection-row                 { flex-direction: row; }
+    .bp3-flexDirection-rowReverse          { flex-direction: row-reverse; }
+}
+
+@include bp4 {
+    .bp4-flexDirection-column              { flex-direction: column; }
+    .bp4-flexDirection-columnReverse       { flex-direction: column-reverse; }
+    .bp4-flexDirection-row                 { flex-direction: row; }
+    .bp4-flexDirection-rowReverse          { flex-direction: row-reverse; }
+}

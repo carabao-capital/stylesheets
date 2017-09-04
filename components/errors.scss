@@ -1,0 +1,9 @@
+.error > input {
+  border-color: map-get($colors, "red");
+}
+
+.error > div {
+  border-color: map-get($colors, "red");
+  border-style: solid;
+  border-width: 1;
+}

@@ -1,0 +1,6 @@
+// 1. time picker must be on top. Using flex to reverse column placement
+.pika-single {
+    display: flex; // 1
+    flex-flow: column-reverse nowrap;
+    z-index: 15;
+}

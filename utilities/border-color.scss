@@ -1,0 +1,9 @@
+// border colors
+@each $colour, $value in $colors {
+  .borderColor-#{$colour} { border-color: $value }
+  .borderTopColor-#{$colour} { border-top-color: $value }
+  .borderBottomColor-#{$colour} { border-bottom-color: $value }
+  .hover-borderColor-#{$colour}:hover { border-color: $value }
+  .hover-borderTopColor-#{$colour}:hover { border-top-color: $value }
+  .hover-borderBottomColor-#{$colour}:hover { border-bottom-color: $value }
+}

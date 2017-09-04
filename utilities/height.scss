@@ -1,0 +1,49 @@
+// heights
+.height-0 { height: 0 }
+.height-auto { height: auto }
+
+// Width
+@each $percent in $percentages {
+  .height-#{$percent}p { height: #{$percent * 1%} }
+}
+
+// VH
+@each $percent in $percentages {
+  .height-#{$percent}vh { height: #{$percent * 1vh} }
+}
+
+@include bp1 {
+  .bp1-height-0 { height: 0 }
+  .bp1-height-auto { height: auto }
+
+  @each $percent in $percentages {
+    .bp1-height-#{$percent}p { height: #{$percent * 1%} }
+  }
+}
+
+@include bp2 {
+  .bp2-height-0 { height: 0 }
+  .bp2-height-auto { height: auto }
+
+  @each $percent in $percentages {
+    .bp2-height-#{$percent}p { height: #{$percent * 1%} }
+  }
+}
+
+@include bp3 {
+  .bp3-height-0 { height: 0 }
+  .bp3-height-auto { height: auto }
+
+  @each $percent in $percentages {
+    .bp3-height-#{$percent}p { height: #{$percent * 1%} }
+  }
+}
+
+@include bp4 {
+  .bp4-height-0 { height: 0 }
+  .bp4-height-auto { height: auto }
+
+  @each $percent in $percentages {
+    .bp4-height-#{$percent}p { height: #{$percent * 1%} }
+  }
+}

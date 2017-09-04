@@ -1,0 +1,7 @@
+// z-index
+.zIndex-n   { z-index: map-get($z-index, 0); }
+.zIndex-xs  { z-index: map-get($z-index, 1); }
+.zIndex-s   { z-index: map-get($z-index, 2); }
+.zIndex-m   { z-index: map-get($z-index, 3); }
+.zIndex-l   { z-index: map-get($z-index, 4); }
+.zIndex-xl  { z-index: map-get($z-index, 5); }

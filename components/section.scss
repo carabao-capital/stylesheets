@@ -1,0 +1,24 @@
+.Section, .section {
+  padding-top: map-get($spacing, "l");
+  padding-bottom: map-get($spacing, "l");
+
+  &.-small {
+    padding-top: map-get($spacing, "s");
+    padding-bottom: map-get($spacing, "s");
+  }
+
+  &.-large {
+    padding-top: map-get($spacing, "xxxxl");
+    padding-bottom: map-get($spacing, "xxxxl");
+  }
+}
+
+.Section.small {
+  padding-top: map-get($spacing, "s");
+  padding-bottom: map-get($spacing, "s");
+}
+
+.Section.large {
+  padding-top: map-get($spacing, "xxxxl");
+  padding-bottom: map-get($spacing, "xxxxl");
+}

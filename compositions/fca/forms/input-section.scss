@@ -1,0 +1,31 @@
+.input-section .input-section-title {
+    display: none;
+}
+
+@include mobile {
+  .input-section {
+    background-color: white;
+    border-top: 1px solid map-get($colors, "grey-l");
+    margin-bottom: map-get($spacing, "l");
+    margin-top: map-get($spacing, "l");
+    position: relative;
+    width: 100%;
+
+    & > .input-section-title {
+      font-size: 0.75rem;
+      color: map-get($colors, "grey");
+      display: block;
+      left: 15px;
+      position: absolute;
+      text-transform: uppercase;
+      top: -25px;
+    }
+
+    & > .input-section-divider {
+      clear: both;
+      background-color: map-get($colors, "grey-xl");
+      border-bottom: 1px solid map-get($colors, "grey-l");
+      height: map-get($spacing, "m");
+    }
+  }
+}

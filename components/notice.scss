@@ -1,0 +1,44 @@
+.notice {
+    background-color: rgba(map-get($colors, "blue"), 0.1);
+    border: 1px solid map-get($colors, "blue");
+    border-radius: map-get($borderRadii, "s");
+    color: map-get($colors, "blue");
+    font-size: map-get($fontSizes, "s");
+    line-height: 22px;
+    padding: map-get($spacing, "s");
+    width: 100%;
+}
+
+.notice-grey {
+    background-color: rgba(map-get($colors, "grey"), 0.1);
+    border: 1px solid map-get($colors, "grey");
+    color: map-get($colors, "black");
+}
+
+.notice-warning {
+    background-color: rgba(map-get($colors, "yellow"), 0.2);
+    border: 1px solid map-get($colors, "yellow");
+    color: map-get($colors, "black");
+}
+
+.notice-error,
+#error_explanation {
+    background-color: rgba(map-get($colors, "red"), 0.1);
+    border: 1px solid map-get($colors, "red");
+    color: map-get($colors, "red");
+}
+
+#error_explanation {
+    margin-bottom: map-get($spacing, "m");
+    padding: map-get($spacing, "m");
+}
+
+#error_explanation h2 {
+    font-size: map-get($fontSizes, "l");
+    margin-bottom: map-get($spacing, "s");
+}
+
+#error_explanation li {
+    list-style: disc;
+    margin-left: map-get($spacing, "xm");
+}

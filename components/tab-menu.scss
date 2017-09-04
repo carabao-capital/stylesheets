@@ -1,0 +1,40 @@
+.TabGroup, .tab-menu {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  list-style: none;
+
+  &.-uppercase {
+    & > .Tab, & > .tab {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.Tab, .tab {
+  display: block;
+  margin-left:    map-get($spacing, "xm");
+  margin-right:   map-get($spacing, "xm");
+  padding-top:    map-get($spacing, "xm");
+  padding-bottom: map-get($spacing, "xm");
+  color: map-get($colors, 'gray500');
+  text-decoration: none;
+  font-size: map-get($fontSizes, "xs");
+  cursor: pointer;
+}
+
+.Tab:hover, .tab:hover {
+  color: map-get($colors, "black");
+}
+
+.Tab.active, .tab.-active {
+  color: map-get($colors, "blue");
+  border-bottom: 2px solid map-get($colors, "blue");
+  cursor: default;
+}
+
+.Tab.disabled, .tab.-disabled {
+  color: map-get($colors, "grey-l");
+  border-color: map-get($colors, "grey-xl");
+  pointer-events: none;
+}
