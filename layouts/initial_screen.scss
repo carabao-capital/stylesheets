@@ -1,0 +1,244 @@
+.welcome-body {
+  float: none;
+  width: 100%;
+  height: 100vh;
+
+  @include desktop {
+    min-width: 1000px;
+    height: 100vh;
+  }
+}
+
+.application-content {
+
+  .fc-logo {
+    margin-top: map-get($spacing, 'xl');
+  }
+
+  .introductory-body {
+    @include mobile {
+      margin-top: map-get($spacing, 'm')
+    }
+
+    margin-top: map-get($spacing, 'xxl');
+    padding: map-get($spacing, 'm');
+  }
+
+  .terms {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: "Averta-Light";
+    font-weight: 400;
+    font-size: map-get($fontSizes, 's');
+    text-align: center;
+    color: map-get($colors, 'grey-d');
+  }
+
+  p { max-width: 400px; }
+
+  @include desktop {
+    float: right;
+    width: 75%;
+    height: 100vh;
+    min-width: 500px;
+    background: asset-url('initial_screens_background.jpg') center center;
+    background-size: cover;
+
+    .fc-logo {
+      margin-top: map-get($spacing, 'xxl');
+    }
+
+    .introductory-body {
+      margin-top: map-get($spacing, 'xl');
+      padding: map-get($spacing, 'm');
+    }
+
+    h1 { font-size: map-get($fontSizes, 'xxl'); }
+    p {
+      margin: 0 auto;
+      max-width: 500px;
+      font-size: map-get($fontSizes, 'xl');
+      line-height: map-get($spacing, 'l');
+    }
+
+    .continueButton { margin-top: map-get($spacing, 'xxl'); }
+
+    .btn-l-custom {
+      height: 50px;
+      line-height: 50px;
+      width: auto;
+      font-size: map-get($fontSizes, 's');
+    }
+
+    .terms {
+      font-family: "Averta-Light";
+      font-weight: 400;
+      font-size: map-get($fontSizes, 's');
+      text-align: center;
+      color: map-get($colors, 'grey-d');
+    }
+  }
+}
+
+.carousel {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 110px;
+  background: rgb(35, 48, 65);
+
+  &.-progress {
+    @include mobile {
+      height: 100%;
+    }
+  }
+
+  .partners-text {
+    position: absolute;
+    bottom: 3px;
+    left: 10px;
+    font-size: map-get($fontSizes, 's')/2;
+  }
+
+  .circle-text {
+    font-size: map-get($fontSizes, 's');
+  }
+
+  @include desktop {
+    position: relative;
+    float: left;
+    min-width: 250px;
+    width: 25%;
+    height: 100vh;
+
+    .carousel-container { margin-top: map-get($spacing, 'xxl'); }
+
+    .partners-text {
+      position: static;
+      font-size: map-get($fontSizes, 's');
+    }
+
+    .circle-text {
+      font-size: map-get($fontSizes, 'xxl');
+    }
+  }
+}
+
+.slick-slider {
+  position: static;
+  margin: 0 auto;
+  max-width: 250px;
+  padding: 0 55px;
+  text-align: center;
+
+
+  p.carousel-item-content {
+    @include hide-on-mobile;
+  }
+
+  img {
+    margin-bottom: 15px;
+    max-width: 150px;
+  }
+
+  @include desktop {
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 350px;
+    height: 100vh;
+    padding: 85px 55px;
+    text-align: center;
+
+    p.carousel-item-content {
+      color: #fff;
+    }
+
+    img {
+      margin-bottom: 15px;
+      max-width: 350px;
+    }
+
+    .carousel-item {
+      margin-bottom: 15px;
+      max-width: 350px;
+    }
+  }
+}
+
+.slick-prev, .slick-next{
+  top: 55px;
+
+  @include desktop { top: 280px; }
+}
+
+.slick-prev {
+  left: 10px;
+  @include desktop { left: 25px; }
+}
+
+.slick-next {
+  right: 10px;
+  @extend .icon;
+  @extend .icon-chevron-right;
+  @include desktop { right: 25px;}
+}
+
+.slick-next:before
+{
+  content: '>';
+}
+
+.slick-prev:before
+{
+  content: '<';
+}
+
+.slick-dots {
+  bottom: -2px;
+  right: 5px;
+  margin: 0;
+  width: inherit;
+  text-align: center;
+
+  @include desktop {
+    bottom: 50px;
+    width: 100%;
+  }
+}
+
+.slick-dots li {
+  width: 10px;
+
+  @include mobile {
+    width: 5px;
+  }
+}
+
+.slick-dots li button {
+  @include mobile {
+    width: 10px;
+  }
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: white;
+
+  @include mobile {
+    font-size: 8px;
+    width: 5px;
+  }
+}
+
+.slick-dots li.slick-active button:before {
+  color: white;
+}
+
+.initial-screens-background-image {
+  @include mobile {
+    background: asset-url('initial_screens_background.jpg') center center;
+    background-size: cover;
+  }
+}

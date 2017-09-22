@@ -1,0 +1,179 @@
+/**
+ * @package   PickMeUp
+ * @author    Nazar Mokrynskyi <nazar@mokrynskyi.com>
+ * @author    Stefan Petre <www.eyecon.ro>
+ * @copyright Copyright (c) 2013-2016, Nazar Mokrynskyi
+ * @copyright Copyright (c) 2008-2009, Stefan Petre
+ * @license   MIT License, see license.txt
+ */
+
+// Variables
+
+$border-radius                    : 0 !default;
+$background                       : map-get($colors, 'white') !default;
+$color                            : map-get($colors, 'black') !default;
+$background-hover                 : map-get($colors, 'yellow') !default;
+$color-hover                      : map-get($colors, 'white') !default;
+$nav-color                        : map-get($colors, 'black') !default;
+$nav-color-hover                  : transparent !default;
+$not-in-month                     : map-get($colors, 'grey-l') !default;
+$disabled                         : map-get($colors, 'grey-xl') !default;
+$disabled-hover                   : transparent !default;
+$selected                         : map-get($colors, 'white') !default;
+$selected-background              : map-get($colors, 'blue') !default;
+$not-in-month-selected-background : $selected-background !default;
+$day-of-week                      : map-get($colors, 'grey') !default;
+$today-background                 : transparent !default;
+$today-color                      : map-get($colors, 'blue') !default;
+
+// Component
+
+.pickmeup {
+    background      : $background;
+    border-radius   : $border-radius;
+    -moz-box-sizing : content-box;
+    box-sizing      : content-box;
+    display         : inline-block;
+    position        : absolute;
+    touch-action    : manipulation;
+}
+
+.pickmeup * {
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+}
+
+.pickmeup.pmu-flat {
+    position : relative;
+}
+
+.pickmeup.pmu-hidden {
+    display : none;
+}
+
+.pickmeup .pmu-instance {
+    box-shadow: 0 3px 20px rgba(map-get($colors, 'black'), .2);
+    font-size: map-get($fontSizes, 's');
+    display    : inline-block;
+    height     : 13.8em;
+    padding    : .5em;
+    text-align : center;
+    width      : 15em;
+}
+
+.pickmeup .pmu-instance .pmu-button {
+    color           : $color;
+    cursor          : pointer;
+    outline         : none;
+    text-decoration : none;
+}
+
+.pickmeup .pmu-instance .pmu-today {
+    background : $today-background;
+    color      : $today-color;
+}
+
+.pickmeup .pmu-instance .pmu-today.pmu-disabled {
+    background-color: $disabled;
+    color: $not-in-month;
+}
+
+.pickmeup .pmu-instance .pmu-today.pmu-disabled:hover {
+    background-color: $disabled;
+    color: $not-in-month;
+}
+
+.pickmeup .pmu-instance .pmu-button:hover {
+    background : $background-hover;
+    color      : $color-hover;
+}
+
+.pickmeup .pmu-instance .pmu-not-in-month {
+    color : $not-in-month;
+}
+
+.pickmeup .pmu-instance .pmu-disabled,
+.pickmeup .pmu-instance .pmu-disabled:hover {
+    background-color: $disabled-hover;
+    color  : $disabled;
+    cursor : default;
+}
+
+.pickmeup .pmu-instance .pmu-selected {
+    background : $selected-background;
+    color      : $selected;
+}
+
+.pickmeup .pmu-instance .pmu-not-in-month.pmu-selected {
+    background : $not-in-month-selected-background;
+}
+
+.pickmeup .pmu-instance nav {
+    color       : $nav-color;
+    display     : -ms-flexbox;
+    display     : -webkit-flex;
+    display     : flex;
+    line-height : 2em;
+}
+
+.pickmeup .pmu-instance nav .pmu-prev,
+.pickmeup .pmu-instance nav .pmu-next {
+    display : none;
+    height  : 2em;
+    width   : 1em;
+}
+
+.pickmeup .pmu-instance nav .pmu-month {
+    width : 14em;
+}
+
+.pickmeup .pmu-instance nav  .pmu-prev:hover,
+.pickmeup .pmu-instance nav  .pmu-next:hover,
+.pickmeup .pmu-instance nav  .pmu-month:hover {
+    background-color: transparent;
+    color: $color
+}
+
+.pickmeup .pmu-instance .pmu-years *,
+.pickmeup .pmu-instance .pmu-months * {
+    display     : inline-block;
+    line-height : 3.6em;
+    width       : 3.5em;
+}
+
+.pickmeup .pmu-instance .pmu-day-of-week {
+    color  : $day-of-week;
+    cursor : default;
+}
+
+.pickmeup .pmu-instance .pmu-day-of-week *,
+.pickmeup .pmu-instance .pmu-days * {
+    display     : inline-block;
+    line-height : 1.5em;
+    width       : 2em;
+}
+
+.pickmeup .pmu-instance .pmu-day-of-week * {
+    line-height : 1.8em;
+}
+
+.pickmeup .pmu-instance:first-child .pmu-prev,
+.pickmeup .pmu-instance:first-child .pmu-next {
+    display : block;
+}
+
+.pickmeup .pmu-instance:first-child .pmu-month,
+.pickmeup .pmu-instance:last-child .pmu-month {
+    width : 13em;
+}
+
+.pickmeup .pmu-instance:first-child:last-child .pmu-month {
+    width : 12em;
+}
+
+.pickmeup:not(.pmu-view-days) .pmu-days,
+.pickmeup:not(.pmu-view-days) .pmu-day-of-week,
+.pickmeup:not(.pmu-view-months) .pmu-months,
+.pickmeup:not(.pmu-view-years) .pmu-years {
+    display : none;
+}

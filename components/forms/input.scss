@@ -5,7 +5,8 @@
 // tel
 
 .Input {
-  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   background-color: white;
   border: 1px solid map-get($colors, 'gray300');
   border-radius: map-get($borderRadii, "s");
@@ -55,7 +56,6 @@
 }
 
 // Size modifications
-
 // .Input.input-s {
 //     height: map-get($spacing, "l");
 //     line-height: map-get($spacing, "l");
@@ -70,29 +70,29 @@
 // Remove this shit somehow
 
 .field_with_errors > input {
-    border-color: map-get($colors, "red");
-    border-style: solid;
-    border-width: 1;
+  border-color: map-get($colors, "red");
+  border-style: solid;
+  border-width: 1;
 }
 
 // State modifications
 
 .Input.input-error {
-    border-color: map-get($colors, "red");
+  border-color: map-get($colors, "red");
 }
 
 .Input.input-currency {
-    background-image: image_url('php.svg');
-    background-position: 15px center;
-    background-repeat: no-repeat;
-    padding-left: map-get($spacing, "l");
+  background-image: image_url('php.svg');
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  padding-left: map-get($spacing, "l");
 }
 
 .Input.input-percentage {
-    background-image: image_url('percentage.svg');
-    background-position: map-get($spacing, "xm") center;
-    background-repeat: no-repeat;
-    padding-left: map-get($spacing, "xl");
+  background-image: image_url('percentage.svg');
+  background-position: map-get($spacing, "xm") center;
+  background-repeat: no-repeat;
+  padding-left: map-get($spacing, "xl");
 }
 
 
@@ -126,9 +126,9 @@
 
 
 input[type=color] {
-    border-radius: map-get($borderRadii, "s");
-    height: map-get($spacing, "l");
-    width: 100%;
+  border-radius: map-get($borderRadii, "s");
+  height: map-get($spacing, "l");
+  width: 100%;
 }
 
 
@@ -156,172 +156,61 @@ input[type=color] {
 
 
 input[type=text].input-inplace {
-    background-color: map-get($colors, "grey");
-    border: none;
-    display: inline;
-    height: auto;
-    line-height: normal;
-    padding: map-get($spacing, "xs");
-}
+  background-color: map-get($colors, "grey");
+  border: none;
+  display: inline;
+  height: auto;
+  line-height: normal;
+  padding: map-get($spacing, "xs");
 
-input[type=text].input-inplace:focus {
+  &:focus {
     background-color: darken(map-get($colors, "grey-xl"), 5);
-}
+  }
 
-input[type=text].input-inplace--white {
+  &.input-inplace--white {
     background-color: white;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // value inputs
 .value-input {
-    display: inline;
+  display: inline;
 }
 
 .value-input-value {
-    display: block;
-    width: 100%;
-    word-wrap: break-word;
+  display: block;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .value-input-value--clickable {
-    cursor: pointer;
+  cursor: pointer;
 }
 
+.value-input input[type=phone],
 .value-input input[type=text],
 .value-input input[type=tel],
 .value-input input[type=number],
 .value-input input[type=email],
 .value-input input[type=password] {
-    background-color: map-get($colors, "grey");
-    border: none;
-    display: inline;
-    font-size: inherit;
-    height: map-get($spacing, "l");
-    line-height: map-get($spacing, "l");
-    padding-left: map-get($spacing, "s");
-    padding-right: map-get($spacing, "s");
-    width: 100%;
-}
+  background-color: map-get($colors, "grey");
+  border: none;
+  display: inline;
+  font-size: inherit;
+  height: map-get($spacing, "l");
+  line-height: map-get($spacing, "l");
+  padding-left: map-get($spacing, "s");
+  padding-right: map-get($spacing, "s");
+  width: 100%;
 
-.value-input input[type=text].input-percentage,
-.value-input input[type=tel].input-percentage,
-.value-input input[type=number].input-percentage,
-.value-input input[type=email].input-percentage,
-.value-input input[type=password].input-percentage {
+  &.input-percentage {
     background-image: image_url('percentage.svg');
     background-position: 5px center;
     background-repeat: no-repeat;
     padding-left: map-get($spacing, "xl");
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .input-with-icon {
   background-color: white;
@@ -352,30 +241,6 @@ input[type=text].input-inplace--white {
   top: 3px;
   z-index: 5;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .date-select-inputs {

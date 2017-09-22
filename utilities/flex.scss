@@ -6,42 +6,94 @@
 .flex-shrink-1 { flex-shrink: 1; }
 .flex-shrink-0 { flex-shrink: 0; }
 
+// flex-direction
+.flexDirection-column { flex-direction: column; }
+
+// align items
+.alignItems-center { align-items: center; }
+.alignItems-flexEnd { align-items: flex-end; }
+
+// Flex wrap
+.flexWrap-nowrap { flex-wrap: nowrap; }
+
+// justify content
+.justifyContent-space-between { justify-content: space-between; } // This naming convention is wrong
+.justifyContent-space-around { justify-content: space-around; }
+.justifyContent-flex-start { justify-content: flex-start; }
+.justifyContent-flex-end { justify-content: flex-end; }
+.justifyContent-center { justify-content: center; }
+
+// justify content
+//.#{$prefix}justifyContent-space-between { justify-content: space-between; }
+//.#{$prefix}justifyContent-space-around { justify-content: space-around; }
+//.#{$prefix}justifyContent-flex-start { justify-content: flex-start; }
+//.#{$prefix}justifyContent-flex-end { justify-content: flex-end; }
+//.#{$prefix}justifyContent-center { justify-content: center; }
+
+// list style
+//.#{$prefix}listStyle-disc li { list-style-type: disc; margin-left: 30px }
+//.#{$prefix}listStyle-none { list-style-type: none; }
+
+// letter spacing
+//.#{$prefix}letterSpacing-3 { letter-spacing: 3px; }
+//.#{$prefix}letterSpacing-2 { letter-spacing: 2px; }
+//.#{$prefix}letterSpacing-1 { letter-spacing: 1px; }
+//.#{$prefix}letterSpacing-0 { letter-spacing: 0px; }
+
+//@each $size, $value in $spacing {
+//.#{$prefix}marginTop-#{$size} { margin-top: $value }
+//.#{$prefix}marginLeft-#{$size} { margin-left: $value }
+//.#{$prefix}marginRight-#{$size} { margin-right: $value }
+//.#{$prefix}marginBottom-#{$size} { margin-bottom: $value !important}
+//}
+
+// flex
+//.#{$prefix}flex-1 { flex: 1; }
+
+// flex-grow
+//.#{$prefix}flex-grow-1 { flex-grow: 1; }
+// flex-grow
+.flex-grow-1 { flex-grow: 1; }
+
+// flex-shrink
+.flex-shrink-0 { flex-shrink: 0; }
+
 @include bp1 {
-    .bp1-flexFlow-row-noWrap { flex-flow: row nowrap; }
+  .bp1-flexFlow-row-noWrap { flex-flow: row nowrap; }
 
-    .bp1-flex-grow-1 { flex-grow: 1; }
-    .bp1-flex-grow-0 { flex-grow: 0; }
+  .bp1-flex-grow-1 { flex-grow: 1; }
+  .bp1-flex-grow-0 { flex-grow: 0; }
 
-    .bp1-flex-shrink-1 { flex-shrink: 1; }
-    .bp1-flex-shrink-0 { flex-shrink: 0; }
+  .bp1-flex-shrink-1 { flex-shrink: 1; }
+  .bp1-flex-shrink-0 { flex-shrink: 0; }
 }
 
 @include bp2 {
-    .bp2-flexFlow-row-noWrap { flex-flow: row nowrap; }
+  .bp2-flexFlow-row-noWrap { flex-flow: row nowrap; }
 
-    .bp2-flex-grow-1 { flex-grow: 1; }
-    .bp2-flex-grow-0 { flex-grow: 0; }
+  .bp2-flex-grow-1 { flex-grow: 1; }
+  .bp2-flex-grow-0 { flex-grow: 0; }
 
-    .bp2-flex-shrink-1 { flex-shrink: 1; }
-    .bp2-flex-shrink-0 { flex-shrink: 0; }
+  .bp2-flex-shrink-1 { flex-shrink: 1; }
+  .bp2-flex-shrink-0 { flex-shrink: 0; }
 }
 
 @include bp3 {
-    .bp3-flexFlow-row-noWrap { flex-flow: row nowrap; }
+  .bp3-flexFlow-row-noWrap { flex-flow: row nowrap; }
 
-    .bp3-flex-grow-1 { flex-grow: 1; }
-    .bp3-flex-grow-0 { flex-grow: 0; }
+  .bp3-flex-grow-1 { flex-grow: 1; }
+  .bp3-flex-grow-0 { flex-grow: 0; }
 
-    .bp3-flex-shrink-1 { flex-shrink: 1; }
-    .bp3-flex-shrink-0 { flex-shrink: 0; }
+  .bp3-flex-shrink-1 { flex-shrink: 1; }
+  .bp3-flex-shrink-0 { flex-shrink: 0; }
 }
 
 @include bp4 {
-    .bp4-flexFlow-row-noWrap { flex-flow: row nowrap; }
+  .bp4-flexFlow-row-noWrap { flex-flow: row nowrap; }
 
-    .bp4-flex-grow-1 { flex-grow: 1; }
-    .bp4-flex-grow-0 { flex-grow: 0; }
+  .bp4-flex-grow-1 { flex-grow: 1; }
+  .bp4-flex-grow-0 { flex-grow: 0; }
 
-    .bp4-flex-shrink-1 { flex-shrink: 1; }
-    .bp4-flex-shrink-0 { flex-shrink: 0; }
+  .bp4-flex-shrink-1 { flex-shrink: 1; }
+  .bp4-flex-shrink-0 { flex-shrink: 0; }
 }

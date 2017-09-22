@@ -14,10 +14,13 @@
  *= require trix
  */
 
+
 @import "variables/*";
 @import "helpers";
 @import "mixins";
 @import "reset";
+@import "slick";
+@import "slick-theme";
 @import "vendor/*";
 
 // Assets
@@ -27,12 +30,16 @@
 
 @import "overrides/*";
 @import "components/**/*";
+@import "layouts/**/*";
 @import "compositions/**/*";
 
 // Custom styles for job listings view
 @import "job_listings";
 @import "chatlio";
 @import "error-container";
+@import "firstcircle/restructured_loan_plan";
+@import "firstcircle/bank_accounts";
+@import "fca/profile";
 
 // Utilities
 @import "utilities/*";

@@ -23,6 +23,11 @@
     cursor: pointer;
     transition: all 100ms ease;
   }
+
+  &.-xl {
+    padding: map-get($spacing, 'm') + 5;
+    margin-bottom: map-get($spacing, 'xl');
+  }
 }
 
 // Sizes
@@ -57,7 +62,6 @@
   opacity: 1;
   visibility: visible;
 }
-
 
 .card-header {
   background-color: rgba(map-get($colors, "grey-xl"), 0.5);

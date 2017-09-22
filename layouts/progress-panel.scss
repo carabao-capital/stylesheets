@@ -1,0 +1,103 @@
+.progress-panel {
+  & > .item {
+    display: flex;
+    align-items: center;
+    padding: map-get($spacing, "m");
+    padding-left: map-get($spacing, "s");
+    position: relative;
+    color: map-get($colors, 'grey');
+  }
+
+  & > .item > p {
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  & > .item.-current > p {
+    color: map-get($colors, 'white');
+    background-color: map-get($colors, "brand");
+  }
+
+  // -current arrow
+  & > .item.-current::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right:8px solid map-get($colors, "brand");
+  }
+
+
+  // .step circle
+  & > .item > .step {
+    width: 10px;
+    height: 10px;
+    margin-left: 8px;
+    border-radius: 100%;
+    background-color: map-get($colors, 'grey');
+  }
+
+  // progress line
+  & > .item > .step::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 22px;
+    top: 45px;
+    background-color: map-get($colors, 'grey');
+  }
+
+  & > .item.-current  ~ .item  {
+    color: map-get($colors, 'green');
+  }
+
+  & > .item.-current  ~ .item > .step,
+  & > .item.-current  > .step::before,
+  & > .item.-current  ~ .item > .step::before {
+    background-color: map-get($colors, 'green');
+  }
+
+  // -logo variant
+  & > .item.-logo > p {
+    margin-left: 0;
+  }
+
+  & > .item.-logo > .step {
+    background: inherit;
+    width: 30px;
+    height: 31px;
+    margin-left: 0;
+    background-size: 30px;
+    border-radius: 0;
+    background-image: image_url("logomark-trans.png");
+  }
+
+  & > .item.-logo > .step::before {
+    top: 60px;
+  }
+
+  // hide lines for last .item
+  & > .item.-first > .step::before {
+    display: none;
+  }
+
+  @include mobile {
+    & > .item.-logo > .step::before {
+      top: 57px;
+    }
+
+    & > .item > .step::before {
+      top: 43px;
+    }
+
+    & > .item > p {
+      font-size: map-get($fontSizes, 's');
+    }
+
+    & > .item.-logo > p {
+      font-size: map-get($fontSizes, 'l');
+    }
+  }
+}

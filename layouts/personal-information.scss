@@ -1,0 +1,95 @@
+.personal-info-header {
+  height: 70px;
+  padding-top: 30px;
+  background-color: map-get($colors, 'black');
+
+  @include desktop {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.logo-mark-white {
+  max-width: 5%;
+  vertical-align: bottom;
+}
+
+.circle-header {
+  margin-left: map-get($spacing, 's');
+  font-size: map-get($fontSizes, 'xs');
+  color: white;
+}
+
+.personal-information-header {
+  padding: map-get($spacing, 'm');
+  color: map-get($colors, 'grey');
+  text-align: center;
+}
+
+.id-header {
+  margin-top: map-get($spacing, 'xs');
+  margin-bottom: map-get($spacing, 'm');
+
+  @include desktop {
+    margin-top: map-get($spacing, 'xl') + 8;
+    margin-bottom: map-get($spacing, 'l');
+  }
+}
+
+.provide {
+  font-size: map-get($fontSizes, 'xxs');
+}
+
+.id-header-content {
+  font-size: map-get($fontSizes, 'xxs');
+  color: map-get($colors, 'grey');
+}
+
+.personal-info-phone {
+  @include desktop {
+    margin-top: map-get($spacing, 'm');
+    margin-bottom: map-get($spacing, 'm');
+  }
+}
+
+.personal-info-email {
+  @include desktop {
+    margin-top: map-get($spacing, 'm');
+    margin-bottom: map-get($spacing, 'm');
+  }
+}
+
+.personal-info-address {
+  .address { height: 100px; }
+
+  @include desktop {
+    .address { height: 140px; }
+  }
+}
+
+.go-back-arrow {
+  margin-right: -15px;
+  vertical-align: text-top;
+}
+
+.personal-info-progress-bar {
+  float: right;
+}
+
+.check-circle {
+  margin-bottom: map-get($spacing, 'm');
+  margin-left: map-get($spacing, 'xl') + 10;
+  font-size: map-get($fontSizes, 'xxxl');
+}
+
+.date-of-birth {
+  #day, #month, #year {
+    margin-right: 1%;
+    padding-right: map-get($spacing, 'xs');
+  }
+
+  #day { width: 22%; }
+  #month { width: 45%; }
+  #year { width: 30%; }
+}

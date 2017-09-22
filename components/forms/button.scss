@@ -235,3 +235,19 @@
     margin-bottom: map-get($spacing, "xm");
   }
 }
+
+.btn.btn-custom {
+  font-size: map-get($fontSizes, 's');
+  height: 35px;
+  line-height: 35px;
+  padding-left: map-get($spacing, 's');
+  padding-right: map-get($spacing, 's');
+  border-radius: 2px;
+  letter-spacing: 0px;
+}
+
+.btn.btn-no-border {
+  border: 0;
+  letter-spacing: 0px;
+  text-transform: none;
+}

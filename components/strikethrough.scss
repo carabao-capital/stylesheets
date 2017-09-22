@@ -1,0 +1,44 @@
+/*
+ * A simple strikethrough style for a divider with a text inside
+ */
+
+.strikethrough {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+
+  > span {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: map-get($colors, 'grey-d');
+    color: map-get($colors, 'white');
+    font-weight: bold;
+    font-size: map-get($fontSizes, 'xs');
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 9999px;
+        height: 1px;
+        background: map-get($colors, 'grey-l');
+    }
+
+    &:before {
+        right: 100%;
+        margin-right: 5px;
+    }
+
+    &:after {
+        left: 100%;
+        margin-left: 5px;
+      }
+  }
+}
