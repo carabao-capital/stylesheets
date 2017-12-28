@@ -1,0 +1,52 @@
+.accordion {
+  font-family: "Averta-Regular";
+
+  & > .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid map-get($colors, 'white');
+    padding: map-get($spacing, 'xm');
+    background-color: map-get($colors, 'grey-xs');
+    color: map-get($colors, 'grey-d');
+    text-align: left;
+  }
+
+  & > .content {
+    display: none;
+  }
+
+  &.-active {
+    & > .content { display: block; }
+  }
+
+  // TODO fixme
+  &.-animated {
+    .content { transition: visibility 0s, opacity 0.5s linear; }
+  }
+
+  &.-compact {
+    & > .header {
+      height: map-get($spacing, 'l');
+      background-color: map-get($colors, 'grey-xl');
+      text-transform: uppercase;
+      font-size: map-get($fontSizes, "xs");
+    }
+  }
+
+  &.-plain {
+    & > .header {
+      padding: inherit;
+      background: inherit;
+      font-size: initial;
+    }
+  }
+
+  // color variants
+  &.-positive {
+    & > .header {
+      background-color: lighten(map-get($colors, "green"), 50%);
+      color: map-get($colors, "green");
+    }
+  }
+}

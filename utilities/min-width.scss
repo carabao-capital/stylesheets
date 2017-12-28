@@ -1,0 +1,4 @@
+@each $percent in $percentages {
+  .minWidth-#{$percent}vh { min-width: #{$percent * 1vh} }
+  .minWidth-#{$percent}p { min-width: #{$percent * 1%} }
+}

@@ -1,10 +1,16 @@
-.ListItemGroup {
-    list-style: none;
-    padding-top: map-get($spacing, "s");
-    padding-bottom: map-get($spacing, "s");
-}
+.list-group {
+  list-style: none;
+  padding-top: map-get($spacing, "s");
+  padding-bottom: map-get($spacing, "s");
 
-.ListItem {
+  &.-interactive {
+    & > .item:hover {
+      background-color: map-get($colors, "grey-xl");
+      cursor: pointer;
+    }
+  }
+
+  & > .item {
     display: flex;
     padding-left: map-get($spacing, "m");
     padding-right: map-get($spacing, "m");
@@ -13,21 +19,11 @@
     min-height: map-get($spacing, "l");
     align-items: center;
     transition: all 100ms linear;
-}
+    font-size: map-get($fontSizes, "s");
+  }
 
-.ListItem.interactive:hover {
-    background-color: map-get($colors, "grey-xl");
-    cursor: pointer;
-}
-
-.ListItem.active {
+  & > .item.-active {
     background-color: map-get($colors, "blue");
     color: map-get($colors, "white");
-}
-
-
-
-.suggestion {
-    @extend .ListItem;
-    @extend .ListItem.interactive;
+  }
 }

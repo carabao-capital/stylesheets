@@ -1,7 +1,6 @@
 html,
 body,
-div,
-span,
+div, span,
 applet,
 object,
 iframe,
@@ -81,8 +80,8 @@ audio,
 video,
 input,
 button {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 nav,
@@ -148,61 +147,52 @@ pre:after,
 code:after,
 a:after,
 button:after {
-    -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-                  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 html {
-    font-family: "Averta-Regular", apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, arial, sans-serif;
-    font-weight: 400;
-    font-size: 62.5%;
-    line-height: 1;
-    color: map-get($colors, 'black');
-    text-rendering: optimizeLegibility;
-}
-body {
-    font-size: 1.4em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-small,
-strong,
-input,
-button,
-select,
-textarea {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: normal;
-    color: inherit;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: inherit;
+  font-family: "Averta-Regular", apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: map-get($colors, 'black');
+  text-rendering: optimizeLegibility;
 }
 
 mark {
-    background: none;
+  background: none;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 table {
-    border-collapse: collapse;
-    background-color: transparent;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+
+th {
+  text-align: left;
+}
+
+iframe {
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+fieldset {
+  border: none;
 }

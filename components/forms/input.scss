@@ -1,9 +1,3 @@
-// text
-// email
-// password
-// number
-// tel
-
 .Input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -147,16 +141,8 @@ input[type=color] {
 
 
 
-
-
-
-
-
-
-
-
 input[type=text].input-inplace {
-  background-color: map-get($colors, "grey");
+  background-color: map-get($colors, "grey-xl");
   border: none;
   display: inline;
   height: auto;
@@ -164,7 +150,7 @@ input[type=text].input-inplace {
   padding: map-get($spacing, "xs");
 
   &:focus {
-    background-color: darken(map-get($colors, "grey-xl"), 5);
+    background-color: map-get($colors, "white");
   }
 
   &.input-inplace--white {
@@ -194,7 +180,7 @@ input[type=text].input-inplace {
 .value-input input[type=number],
 .value-input input[type=email],
 .value-input input[type=password] {
-  background-color: map-get($colors, "grey");
+  background-color: map-get($colors, "grey-xl");
   border: none;
   display: inline;
   font-size: inherit;
@@ -213,22 +199,22 @@ input[type=text].input-inplace {
 }
 
 .input-with-icon {
+  display: inline-flex;
+  width: 100%;
+  height: map-get($spacing, "l");
+  padding: map-get($spacing, "s");
+  position: relative;
   background-color: white;
   box-shadow: inset 0 1px 2px rgba(map-get($colors, "gray900"), 0.1);
-  font-size: map-get($fontSizes, 's');
-  height: map-get($spacing, "l");
-  padding-left: map-get($spacing, "s");
-  width: 100%;
-
-  border: none;
-  position: relative;
-  padding: map-get($spacing, "s");
+  border: solid 1px map-get($colors, "gray300");
+  border-radius: map-get($borderRadii, "s");
 }
 
 .input-with-icon input {
+  padding-left: map-get($spacing, "l");
   border: none;
   outline: none;
-  padding-left: map-get($spacing, "xl");
+  font-size: map-get($fontSizes, 'm');
 }
 
 .input-with-icon input:focus {

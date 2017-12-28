@@ -1,4 +1,13 @@
-.expand-toggle {
+// TODO: Document Me!!!
+.expand-container {
+  position: relative;
+
+  & > .content {
+    height: map-get($spacing, 'xxxxl');
+    overflow: hidden;
+  }
+
+  & > .trigger {
     background-image: linear-gradient(rgba(white, 0), rgba(white, 1));
     bottom: 0;
     color: map-get($colors, 'blue');
@@ -8,8 +17,13 @@
     position: absolute;
     text-align: center;
     width: 100%;
-}
+  }
 
-.expand-toggle--off {
+  &.-active > .trigger {
     background-image: none;
+  }
+
+  &.-active > .content {
+    height: auto;
+  }
 }

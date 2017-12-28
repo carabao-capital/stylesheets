@@ -1,0 +1,5 @@
+// max-height
+@each $percent in $percentages {
+  .minHeight-#{$percent}vh { min-height: #{$percent * 1vh} }
+  .minHeight-#{$percent}p { min-width: #{$percent * 1%} }
+}

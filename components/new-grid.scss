@@ -72,7 +72,7 @@
 .bp4-GridColumn--10,
 .bp4-GridColumn--11,
 .bp4-GridColumn--12 {
-    padding-top: map-get($spacing, 'm');
+    padding-top: map-get($spacing, 'xs');
     padding-left: map-get($spacing, 'm');
     width: 100%;
 }

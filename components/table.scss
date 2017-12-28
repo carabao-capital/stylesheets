@@ -1,4 +1,4 @@
-.table, .Table {
+.table {
   width: 100%;
   max-width: 100%;
   font-size: map-get($fontSizes, 's');
@@ -24,43 +24,39 @@
         border-bottom: none;
       }
 
-      tbody > tr > td[data-th]:before {
+      tbody > tr > td[data-th]:before,
+      {
         display: inline-block;
         content: attr(data-th)": ";
         width: 100px;
-      }
-
-      tbody > tr > td.amount {
-        text-align: left;
       }
     }
   }
 }
 
-.table tr, .Table tr {
+.table tr {
   border-bottom: 1px solid map-get($colors, 'gray100');
 }
 
-.table td, .Table td,
-.table th, .Table th {
+.table td,
+.table th {
   padding-top: 8px;
   padding-bottom: 8px;
   line-height: 22px;
 }
 
-.table th, .Table th {
-  text-align: left;
+.table th {
   font-weight: 400;
   color: map-get($colors, 'gray500');
 }
 
-
-.Table.-padded, .table.-padded th:first-child,
-.Table.-padded, .table.-padded td:first-child {
+// Padded variant
+.table.-padded th:first-child,
+.table.-padded td:first-child {
   padding-left: map-get($spacing, 'm');
 }
 
-.Table.-padded, .table.-padded th:last-child,
-.Table.-padded, .table.-padded td:last-child {
+.table.-padded th:last-child,
+.table.-padded td:last-child {
   padding-right: map-get($spacing, 'm');
 }

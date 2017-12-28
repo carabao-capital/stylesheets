@@ -4,82 +4,90 @@ $grid-column-width: ($grid-width / 12) - $grid-column-padding;
 $padding-percentage: ($grid-column-padding / $grid-width) * 100%;
 
 .columns {
-    @extend .clearfix;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: #{$grid-width}px;
-    width: 100%;
+  @extend .clearfix;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: #{$grid-width}px;
+  width: 100%;
+
+  &.-full {
+    max-width: none;
+  }
+
+  &.-collapse .column {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .columns.columns-full-width {
-    max-width: none;
+  max-width: none;
 }
 
 .columns .column {
-    float: left;
-    margin-left: $padding-percentage / 2;
-    margin-right: $padding-percentage / 2;
-    min-height: 1px;
+  float: left;
+  margin-left: $padding-percentage / 2;
+  margin-right: $padding-percentage / 2;
+  min-height: 1px;
 }
 
 .columns .column:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .columns .column:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .columns {
-    @for $i from 1 to 13 {
-        $column-width: (($grid-column-width * $i) + ($grid-column-padding / (12 / $i)) + ($grid-column-padding * ($i - 1))) / $grid-width;
+  @for $i from 1 to 13 {
+    $column-width: (($grid-column-width * $i) + ($grid-column-padding / (12 / $i)) + ($grid-column-padding * ($i - 1))) / $grid-width;
 
-        .column-#{$i} {
-            @extend .column;
-            width: ($column-width * 100%);
-        }
-
-        .column.column-push-#{$i} {
-            margin-left: ($column-width * 100%) + $padding-percentage;
-        }
+    .column-#{$i} {
+      @extend .column;
+      width: ($column-width * 100%);
     }
+
+    .column.column-push-#{$i} {
+      margin-left: ($column-width * 100%) + $padding-percentage;
+    }
+  }
 }
 
 .columns.columns-endless .column:first-child {
-    margin-left: $padding-percentage / 2;
+  margin-left: $padding-percentage / 2;
 }
 
 .columns.columns-endless .column:last-child {
-    margin-right: $padding-percentage / 2;
+  margin-right: $padding-percentage / 2;
 }
 
 .columns.columns-endless {
-    @for $i from 1 to 13 {
-        $column-width: (($grid-column-width * $i) + ($grid-column-padding * ($i - 1))) / $grid-width;
+  margin-left: -($padding-percentage / 2);
+  margin-right: -($padding-percentage / 2);
 
-        .column-#{$i} {
-            width: ($column-width * 100%);
-        }
+  @for $i from 1 to 13 {
+    $column-width: (($grid-column-width * $i) + ($grid-column-padding * ($i - 1))) / $grid-width;
+
+    .column-#{$i} {
+      width: ($column-width * 100%);
     }
+  }
 }
 
-.columns.columns-collapse .column {
-    margin-left: 0;
-    margin-right: 0;
-}
 
 .columns {
-    @media #{map-get($breakpoints, 'mobile')} {
-        @for $i from 1 to 13 {
-            .column-#{$i} {
-                margin-left: 0;
-                margin-right: 0;
-                width: 100%;
-            }
+  @media #{map-get($breakpoints, 'mobile')} {
+    @for $i from 1 to 13 {
+      .column-#{$i} {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+      }
 
-            .column.column-push-#{$i} {
-                margin-left: 0;
-            }
-        }
+      .column.column-push-#{$i} {
+        margin-left: 0;
+      }
     }
+  }
 }

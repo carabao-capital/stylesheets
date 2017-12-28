@@ -1,75 +1,84 @@
-.Avatar {
-    align-items: center;
-    background-color: map-get($colors, "gray200");
-    background-position: center center;
-    background-size: cover;
-    border-radius: map-get($borderRadii, "round");
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
-    display: inline-flex;
-    font-family: "Averta-SemiBold";
-    font-size: map-get($fontSizes, 's');
-    font-weight: normal;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
+.Avatar, .avatar {
+  align-items: center;
+  background-color: map-get($colors, "gray200");
+  background-position: center center;
+  background-size: cover;
+  border-radius: map-get($borderRadii, "round");
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
+  display: inline-flex;
+  font-family: "Averta-SemiBold";
+  font-size: map-get($fontSizes, 's');
+  font-weight: normal;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  object-fit: cover;
 }
 
 .Avatar.avatar-has-image {
-    color: transparent;
+  color: transparent;
 }
 
 // Sizes
 
 .Avatar.size1 {
-    font-size: map-get($fontSizes, 'xxxs');
-    height: map-get($spacing, "m");
-    letter-spacing: .8px;
-    width: map-get($spacing, "m");
+  font-size: map-get($fontSizes, 'xxxs');
+  height: map-get($spacing, "m");
+  letter-spacing: .8px;
+  width: map-get($spacing, "m");
 }
 
 .Avatar.size2 {
-    font-size: map-get($fontSizes, 'xs');
-    height: map-get($spacing, "l");
-    letter-spacing: .8px;
-    width: map-get($spacing, "l");
+  font-size: map-get($fontSizes, 'xs');
+  height: map-get($spacing, "l");
+  letter-spacing: .8px;
+  width: map-get($spacing, "l");
 }
 
 .Avatar.size3 {
-    font-size: map-get($fontSizes, 'm');
-    height: map-get($spacing, "xl");
-    letter-spacing: .5px;
-    line-height: map-get($spacing, "xl");
-    width: map-get($spacing, "xl");
+  font-size: map-get($fontSizes, 'm');
+  height: map-get($spacing, "xl");
+  letter-spacing: .5px;
+  line-height: map-get($spacing, "xl");
+  width: map-get($spacing, "xl");
 }
 
 .Avatar.size4 {
-    font-size: map-get($fontSizes, 'l');
-    height: map-get($spacing, "xxl");
-    line-height: map-get($spacing, "xxl");
-    width: map-get($spacing, "xxl");
+  font-size: map-get($fontSizes, 'l');
+  height: map-get($spacing, "xxl");
+  line-height: map-get($spacing, "xxl");
+  width: map-get($spacing, "xxl");
 }
 
 .Avatar.size5 {
-    font-size: map-get($fontSizes, 'xxl');
-    height: map-get($spacing, "xxxl");
-    letter-spacing: -.5px;
-    line-height: map-get($spacing, "xxxl");
-    width: map-get($spacing, "xxxl");
+  font-size: map-get($fontSizes, 'xxl');
+  height: map-get($spacing, "xxxl");
+  letter-spacing: -.5px;
+  line-height: map-get($spacing, "xxxl");
+  width: map-get($spacing, "xxxl");
+}
+
+.Avatar.size6 {
+  width: 7rem;
+  height: 7rem;
+  letter-spacing: -.5px;
+  line-height: map-get($spacing, "xxxxl");
+  font-size: map-get($fontSizes, 'xxxl');
 }
 
 // Nested avatars
 
 .Avatar.nested {
-    position: relative;
+  position: relative;
 }
 
 .Avatar.nested .Avatar {
-    bottom: -6px;
-    box-shadow: 0 0 0 1px white;
-    height: map-get($spacing, "m");
-    position: absolute;
-    right: -12px;
-    width: map-get($spacing, "m");
+  bottom: -6px;
+  box-shadow: 0 0 0 1px white;
+  height: map-get($spacing, "m");
+  position: absolute;
+  right: -12px;
+  width: map-get($spacing, "m");
 }
 
 
@@ -87,28 +96,28 @@
 // Remove this shit show asap
 
 .avatars.avatars-picture-in-picture {
-    position: relative;
-    width: map-get($spacing, "xxl");
+  position: relative;
+  width: map-get($spacing, "xxl");
 }
 
 .avatars.avatars-picture-in-picture .secondary {
-    bottom: -5px;
-    position: absolute;
-    right: 0;
-    width: map-get($spacing, "m");
+  bottom: -5px;
+  position: absolute;
+  right: 0;
+  width: map-get($spacing, "m");
 }
 
 .avatars.avatars-picture-in-picture.smaller {
-    width: map-get($spacing, "xl");
+  width: map-get($spacing, "xl");
 }
 
 .avatars.avatars-picture-in-picture.smaller .avatar-xl {
-    height: map-get($spacing, "xl");
-    line-height: map-get($spacing, "xl");
-    width: map-get($spacing, "xl");
+  height: map-get($spacing, "xl");
+  line-height: map-get($spacing, "xl");
+  width: map-get($spacing, "xl");
 }
 
 .avatars.avatars-picture-in-picture.smaller .secondary {
-    bottom: -10px;
-    width: map-get($spacing, "xm");
+  bottom: -10px;
+  width: map-get($spacing, "xm");
 }

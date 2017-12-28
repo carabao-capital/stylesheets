@@ -1,5 +1,4 @@
-// TODO: remove backwards compatibility once converted properly
-.Status, .status {
+.status {
   align-items: center;
   background-color: map-get($colors, 'white');
   border-radius: map-get($borderRadii, "rounded");
@@ -16,31 +15,31 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  &.neutral, &.-neutral {
+  &.-neutral {
     background-color: map-get($colors, 'gray100');
     color: map-get($colors, 'gray500');
     box-shadow: none;
   }
 
-  &.primary, &.-primary {
+  &.-primary {
     background-color: map-get($colors, 'blue100');
     color: map-get($colors, 'blue700');
     box-shadow: none;
   }
 
-  &.positive, &.-positive {
+  &.-positive {
     background-color: map-get($colors, 'green100');
     color: map-get($colors, 'green700');
     box-shadow: none;
   }
 
-  &.warning, &.-warning {
+  &.-warning {
     background-color: map-get($colors, 'yellow100');
     color: map-get($colors, 'yellow700');
     box-shadow: none;
   }
 
-  &.negative, &.-negative {
+  &.-negative {
     background-color: map-get($colors, 'red100');
     color: map-get($colors, 'red700');
     box-shadow: none;

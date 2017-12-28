@@ -1,0 +1,7 @@
+.border-none { border: 0 }
+
+@each $direction in $directions {
+  .border-#{$direction} { border-#{$direction}: 1px solid map-get($colors, 'grey-l'); }
+  .border-#{$direction}-l { border-#{$direction}: 1px solid map-get($colors, 'grey-xl'); }
+  .border#{capitalize($direction)}-none { border-#{$direction}: 0; }
+}

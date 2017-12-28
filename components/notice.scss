@@ -11,13 +11,13 @@
   &.-neutral {
     background-color: rgba(map-get($colors, "grey"), 0.1);
     border: 1px solid map-get($colors, "grey");
-    color: map-get($colors, "black");
+    color: map-get($colors, "grey");
   }
 
   &.-warning {
     background-color: rgba(map-get($colors, "yellow"), 0.2);
     border: 1px solid map-get($colors, "yellow");
-    color: map-get($colors, "black");
+    color: map-get($colors, "yellow");
   }
 
   &.-negative {

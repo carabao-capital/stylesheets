@@ -8,13 +8,11 @@
   color: map-get($colors, "gray900");
   cursor: pointer;
   display: inline-flex;
-  font-family: "Averta-Semibold";
-  font-weight: 600;
+  font-family: "Averta-Light";
   font-size: map-get($fontSizes, 'xs');
   min-height: map-get($spacing, "l");
   letter-spacing: .06em;
   line-height: 1;
-  min-width: map-get($spacing, "l");
   padding-left: map-get($spacing, "xm");
   padding-right: map-get($spacing, "xm");
   text-align: center;
@@ -26,31 +24,19 @@
   transition-duration: map-get($transitionDurations, "s");
   transition-timing-function: ease;
 
-  // color modifiers
-  &.-primary {
-    background-color: map-get($colors, "blue500");
-    color: map-get($colors, "white");
+  //color modifiers with active
+  @each $color in $semanticColorLabels {
+    &.-#{$color} {
+      background-color: map-get($semanticColors, $color);
+      color: map-get($colors, "white");
+    }
+
+    &.-active.-#{$color} {
+      background-color: darken(map-get($semanticColors, $color), 10);
+      color: map-get($colors, "white");
+    }
   }
 
-  &.-positive {
-    background-color: map-get($colors, "green500");
-    color: map-get($colors, "white");
-  }
-
-  &.-warning {
-    background-color: map-get($colors, "yellow500");
-    color: map-get($colors, "white");
-  }
-
-  &.-negative {
-    background-color: map-get($colors, "red500");
-    color: map-get($colors, "white");
-  }
-
-  &.-white {
-    background-color: map-get($colors, "white");
-    color: map-get($colors, "brand");
-  }
 
   // Disabled button
   &.disabled, &.-disabled {
@@ -59,9 +45,17 @@
     pointer-events: none;
   }
 
+  &:active, &.-active {
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.1), inset 0 1px 3px rgba(map-get($colors, "gray900"), 0.1);
+  }
+
   &:disabled {
     cursor: default;
     opacity: 0.6;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.1), 0 3px 5px rgba(map-get($colors, "gray900"), 0.15);
   }
 
   // Block button
@@ -74,80 +68,61 @@
     border-radius: map-get($borderRadii, "rounded");
   }
 
+  &.-noradius {
+    border-radius: 0;
+  }
+
   // size modifiers
+  &.-small {
+    height: map-get($spacing, 'm');
+    font-size: map-get($fontSizes, "xxs");
+    padding: 0 map-get($spacing, 's');
+  }
+
   &.-large {
     padding-top: map-get($spacing, 'xm');
     padding-bottom: map-get($spacing, 'xm');
-    //font-size:  map-get($fontSizes, 'm');
   }
 }
 
-.Button:hover {
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.1), 0 3px 5px rgba(map-get($colors, "gray900"), 0.15);
-}
-
-.Button:active {
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.1), inset 0 1px 3px rgba(map-get($colors, "gray900"), 0.1);
-}
-
-// Semantic colors
-
-.Button.primary {
-  background-color: map-get($colors, "blue500");
-  color: map-get($colors, "white");
-}
-
-.Button.positive {
-  background-color: map-get($colors, "green500");
-  color: map-get($colors, "white");
-}
-
-.Button.warning {
-  background-color: map-get($colors, "yellow500");
-}
-
-.Button.negative {
-  background-color: map-get($colors, "red500");
-  color: map-get($colors, "white");
-}
 
 // Ghost button
 
-.button.-ghost, .Button.-ghost {
+.button.-ghost {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px map-get($colors, "gray500"), 0 0 0 1px rgba(map-get($colors, "gray900"), 0);
   color: map-get($colors, "gray500");
 }
 
-.button.-ghost.-primary, .Button.-ghost.primary {
+.button.-ghost.-primary {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px map-get($colors, "blue500"), 0 0 0 1px rgba(map-get($colors, "gray900"), 0);
   color: map-get($colors, "blue500");
 }
 
-.button.-ghost.-positive, .Button.-ghost.positive {
+.button.-ghost.-positive {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px map-get($colors, "green500"), 0 0 0 1px rgba(map-get($colors, "gray900"), 0);
   color: map-get($colors, "green500");
 }
 
-.button.-ghost.-warning, .Button.-ghost.warning {
+.button.-ghost.-warning {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px map-get($colors, "yellow500"), 0 0 0 1px rgba(map-get($colors, "gray900"), 0);
   color: map-get($colors, "yellow500");
 }
 
-.button.-ghost.-negative, .Button.-ghost.negative {
+.button.-ghost.-negative {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px map-get($colors, "red500"), 0 0 0 1px rgba(map-get($colors, "gray900"), 0);
   color: map-get($colors, "red500");
 }
 
-.button.-ghost:hover, .Button.-ghost:hover {
+.button.-ghost:hover {
   opacity: 0.6;
 }
 
-.button.-ghost:active, .Button.-ghost:active {
+.button.-ghost:active {
   opacity: 0.4;
 }
 
@@ -180,21 +155,9 @@
 .button.-blank.warning { color: map-get($colors, "yellow500"); }
 .button.-blank.negative { color: map-get($colors, "red500"); }
 
-// Pill button
-
-.Button.Button--rounded {
-  border-radius: map-get($borderRadii, "rounded");
-}
-
-// Block button
-
-.Button.Button--block {
-  justify-content: center;
-  width: 100%;
-}
 
 // Loading state
-.Button.Button--loading, .button.-loading, .Button.-loading {
+.button.-loading, {
   background-image: image_url('loaders/loading-grey-l.gif');
   background-position: center;
   background-repeat: no-repeat;
@@ -220,11 +183,11 @@
 
 
 
-// the mobile-btn-full modifier will make the the button full width and remove
+// the -mobile modifier will make the the button full width and remove
 // border radius. This is to give a more native feel.
 //
 
-.mobile-btn-full, .button.-mobile, .Button.-mobile {
+.button.-mobile {
   @include mobile {
     height: auto;
     padding: map-get($spacing, "xm");

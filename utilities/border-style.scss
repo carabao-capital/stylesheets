@@ -1,3 +1,9 @@
 .borderStyle-dashed { border-style: dashed; }
 .borderStyle-dotted { border-style: dotted; }
 .borderStyle-solid { border-style: solid; }
+
+@each $direction in $directions {
+  .borderStyle#{capitalize($direction)}-dashed { border-#{$direction}-style: dashed; }
+  .borderStyle#{capitalize($direction)}-dotted { border-#{$direction}-style: dotted; }
+  .borderStyle#{capitalize($direction)}-solid { border-#{$direction}-style: solid; }
+}

@@ -1,17 +1,6 @@
-.border-top { border-top: 1px solid map-get($colors, 'grey-xl') }
-.border-left { border-left: 1px solid map-get($colors, 'grey-xl') }
-.border-right { border-right: 1px solid map-get($colors, 'grey-xl') }
-.border-bottom { border-bottom: 1px solid map-get($colors, 'grey-xl') }
-
-// borders
 .borderWidth-1 { border-width: 1px; }
-.borderTopWidth-1 { border-top-width: 1px; }
-.borderLeftWidth-1 { border-left-width: 1px; }
-.borderRightWidth-1 { border-right-width: 1px; }
-.borderBottomWidth-1 { border-bottom-width: 1px; }
 
-.border-none { border: 0 }
-.borderTop-none { border-top: 0 }
-.borderLeft-none { border-left: 0 }
-.borderRight-none { border-right: 0 }
-.borderBottom-none { border-bottom: 0 }
+@each $direction in $directions {
+  .border#{capitalize($direction)}Width-1 { border-#{$direction}-width: 1px; }
+  .border#{capitalize($direction)}Width-none { border-#{$direction}-width: 0; }
+}

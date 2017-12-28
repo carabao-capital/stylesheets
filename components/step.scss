@@ -1,0 +1,42 @@
+.step-tag {
+  height: map-get($spacing, 'l');
+  width: map-get($spacing, 'l');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: map-get($colors, 'grey');
+  border-radius: map-get($borderRadii, 'rounded');
+  font-family: "Averta-Light";
+
+  &.-square {
+    border-radius: map-get($borderRadii, 'm');
+  }
+
+  &.-noround {
+    border-radius: 0;
+  }
+
+  // colors
+  &.-brand { background-color: map-get($colors, 'brand')}
+  &.-primary { background-color: map-get($colors, 'blue')}
+  &.-positive { background-color: map-get($colors, 'green')}
+  &.-negative { background-color: map-get($colors, 'red')}
+  &.-warning { background-color: map-get($colors, 'yellow')}
+  &.-white {
+    background-color: map-get($colors, 'white');
+    color: map-get($colors, 'brand');
+  }
+
+  // size
+  &.-small {
+    height: map-get($spacing, 'xm');
+    width: map-get($spacing, 'xm');
+    font-size: map-get($fontSizes, 'xxs');
+  }
+
+  &.-medium {
+    height: map-get($spacing, 'm');
+    width: map-get($spacing, 'm');
+    font-size: map-get($fontSizes, 'xs');
+  }
+}

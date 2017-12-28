@@ -1,19 +1,25 @@
-.Card, .card {
+.card {
   background-color: white;
   border-radius: map-get($borderRadii, "s");
   box-shadow: 0 1px 1px rgba(39,51,67,0.1);
-  overflow: hidden;
 
   &.-small { padding: map-get($spacing, "s"); }
   &.-medium { padding: map-get($spacing, "m"); }
   &.-large { padding: map-get($spacing, "l"); }
+  &.-xl { padding: map-get($spacing, 'm') + 5; }
+
+  @include mobile {
+    &.-small-mobile { padding: map-get($spacing, "s"); }
+    &.-medium-mobile { padding: map-get($spacing, "m"); }
+    &.-large-mobile { padding: map-get($spacing, "l"); }
+    &.-xl-mobile { padding: map-get($spacing, 'm') + 5; }
+  }
 
   // card styles for desktop only
   &.-desktop {
     @include desktop {
       padding: map-get($spacing, "l");
       background-color: white;
-      border-radius: map-get($borderRadii, "m");
       box-shadow: 0 1px 5px rgba(map-get($colors, "black"), 0.1);
       display: block;
     }
@@ -24,62 +30,75 @@
     transition: all 100ms ease;
   }
 
+  &.-interactive:hover {
+    box-shadow: 0 3px 15px rgba(map-get($colors, 'black'), .1);
+    transform: scale(1.01);
+  }
+
+}
+
+// I will eventually replace all of this with the above
+
+.card {
+  background-color: white;
+  border-radius: map-get($borderRadii, "m");
+  box-shadow: 0 1px 5px rgba(map-get($colors, "black"), 0.1);
+  display: block;
+  text-decoration: none;
+
   &.-xl {
     padding: map-get($spacing, 'm') + 5;
     margin-bottom: map-get($spacing, 'xl');
   }
-}
 
-// Sizes
+  &.-fullwidth {
+    width: 100%;
+  }
 
-.Card.small {
-  padding: map-get($spacing, "s");
-}
+  &.-sidebar {
+    width: 35%;
+  }
 
-.Card.medium {
-  padding: map-get($spacing, "m");
-}
+  &.-noshadow {
+    box-shadow: none;
+  }
 
-.Card.large {
-  padding: map-get($spacing, "l");
-}
+  &.-noradius {
+    border-radius: 0px;
+  }
 
-// Interactive cards
+  &.-leftsiderounded {
+    border-top-right-radius: map-get($spacing, '0');
+    border-bottom-right-radius: map-get($spacing, '0');
+    border-bottom-left-radius: map-get($spacing, 'xs');
+    border-top-left-radius: map-get($spacing, 'xs');
+  }
 
-.Card.interactive {
-  cursor: pointer;
-  transition: all 100ms ease;
-}
-
-.Card.interactive:hover {
-  box-shadow: 0 3px 15px rgba(map-get($colors, 'black'), .1);
-  // transform: scale(1.01);
-}
-
-// Refactor this shit
-
-.Card.interactive:hover .card-actions {
-  opacity: 1;
-  visibility: visible;
+  &.-eightyVH {
+    min-height: 80vh;
+  }
 }
 
 .card-header {
   background-color: rgba(map-get($colors, "grey-xl"), 0.5);
   border-bottom: 1px solid rgba(map-get($colors, "grey"), 0.1);
-  height: map-get($spacing, "xxl");
+  min-height: map-get($spacing, "xxl");
   line-height: map-get($spacing, "xxl");
   padding-left: map-get($spacing, "m");
   padding-right: map-get($spacing, "m");
-}
 
-// desktop-card will create a card element but only for desktop styling.
-.desktop-card {
-  @include desktop {
-    padding: map-get($spacing, "l");
-    background-color: white;
-    border-radius: map-get($borderRadii, "m");
-    box-shadow: 0 1px 5px rgba(map-get($colors, "black"), 0.1);
-    display: block;
+  &.-black {
+    color: map-get($colors, 'white');
+    text-align: center;
+    background-color: map-get($colors, 'black');
+  }
+
+  &.-rounded-top-left {
+    border-top-left-radius: 5px;
+  }
+
+  &.-nolineheight {
+    line-height: inherit;
   }
 }
 

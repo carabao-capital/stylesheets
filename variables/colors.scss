@@ -2,7 +2,7 @@
 $colors: (
   'white': hsl(0, 0%, 100%),
 
-  'black': hsl(0, 0%, 0%),
+  'black': #141414,
 
   'blue100': hsl(210, 100%, 96%),
   'blue500': hsl(210, 100%, 50%),
@@ -40,4 +40,14 @@ $colors: (
   'grey-l':  hsl(218, 11%, 85%),
   'grey-xl': hsl(240, 11%, 96%),
   'white-transparent': hsla(0, 0%, 100%, .8),
+);
+
+// semantic colors
+$semanticColorLabels: ('brand', 'primary', 'positive', 'negative', 'warning');
+$semanticColors: (
+  'brand':    map-get($colors, 'brand'),
+  'primary':  map-get($colors, 'blue'),
+  'positive': map-get($colors, 'green'),
+  'negative': map-get($colors, 'red'),
+  'warning':  map-get($colors, 'yellow')
 );
