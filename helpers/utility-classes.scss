@@ -1,0 +1,108 @@
+// TODO: move this to utility directory
+
+// typekit adds the class wf-loading to the body when it is loading the fonts.
+// By setting the opacity of this class to 0 we essentialy hide the body until
+// typekit has loaded the font, thus preventing the flash of unstyled text.
+.wf-loading { opacity: 0; }
+
+// clearfix
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.loading {
+  height: 100px;
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: image_url('loaders/loading-grey-l.gif');
+}
+
+.loading-indicator {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-size: 15px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: image_url('loaders/loading-grey-l.gif');
+}
+
+// removes the ability for a user to highlight text.
+@mixin preventTextSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.preventTextSelect,
+[draggable] {
+  @include preventTextSelect
+}
+
+.down-arrow {
+  width: 0;
+  height: 0;
+  display: block;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 3px solid map-get($colors, 'grey');
+}
+
+.down-arrow-white {
+  border-top: 3px solid map-get($colors, 'white');
+}
+
+.up-arrow {
+  width: 0;
+  height: 0;
+  display: block;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 3px solid map-get($colors, 'grey');
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.blur {
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+
+// Hides the element on mobile devices.
+@media #{map-get($breakpoints, "mobile")} {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+// Makes an element only visible on mobile
+.show-on-mobile {
+  opacity: 0;
+  display: none !important;
+  visibility: hidden;
+}
+
+@media #{map-get($breakpoints, "mobile")} {
+  .show-on-mobile {
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+}
