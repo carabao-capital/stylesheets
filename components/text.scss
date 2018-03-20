@@ -7,6 +7,7 @@
   &.-negative { color: map-get($colors, "red500"); }
 
   // text sizes
+  // remove me!!!
   &.-size1 {
     font-size: map-get($fontSizes, "xs");
     letter-spacing: 0;
@@ -41,7 +42,12 @@
     margin-left: -1px;
     line-height: 36px;
   }
+
+  &.-note {
+    color: map-get($colors, 'grey');
+  }
 }
+
 // TODO REMOVE
 .Text.size1 {
   font-size: map-get($fontSizes, "xs");

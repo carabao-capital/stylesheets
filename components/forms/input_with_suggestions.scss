@@ -1,5 +1,13 @@
 .input-with-suggestions {
     position: relative;
+    min-width: 180px;
+}
+.input-with-suggestions:first-child {
+    width: 100%;
+}
+
+.input-with-suggestions input {
+    width: 100%;
 }
 
 .input-with-suggestions > .item-suggestions {

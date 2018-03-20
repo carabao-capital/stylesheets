@@ -4,13 +4,44 @@
   padding-bottom: map-get($spacing, "s");
 
   &.-interactive {
-    & > .item:hover {
+    & .item:not(.-active):hover,
+    & .list-group-item:not(.-active):hover {
       background-color: map-get($colors, "grey-xl");
       cursor: pointer;
     }
   }
 
-  & > .item {
+  &.-bordered {
+    & > .item {
+      @extend .border-bottom;
+    }
+    & > .item:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &.-rounded {
+    & > .list-group-item {
+      border-radius: map-get($borderRadii, "m");
+    }
+  }
+
+  &.-size1 {
+    & > .list-group-item {
+      font-size: map-get($fontSizes, "m");
+      padding-top: map-get($spacing, "xm");
+      padding-bottom: map-get($spacing, "xm");
+    }
+  }
+
+  &.-color1 {
+    & > .list-group-item {
+      color: map-get($colors, "grey-d");
+    }
+  }
+
+  & > .item,
+  .list-group-item {
     display: flex;
     padding-left: map-get($spacing, "m");
     padding-right: map-get($spacing, "m");
@@ -22,7 +53,12 @@
     font-size: map-get($fontSizes, "s");
   }
 
-  & > .item.-active {
+  & > .item.-large {
+    padding: map-get($spacing, "m");
+  }
+
+  & > .item.-active,
+  & .list-group-item.-active {
     background-color: map-get($colors, "blue");
     color: map-get($colors, "white");
   }

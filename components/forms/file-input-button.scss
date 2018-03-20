@@ -3,6 +3,7 @@
   @extend .-primary;
   overflow: hidden;
   position: relative;
+  z-index: 10;
 }
 
 .file-input-button.-disabled {
@@ -20,4 +21,5 @@
   right: 0;
   top: 0;
   width: 100%;
+  z-index: 1;
 }

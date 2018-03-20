@@ -1,4 +1,4 @@
-.Input {
+.Input, .input {
   -webkit-appearance: none;
   -moz-appearance: none;
   background-color: white;
@@ -13,6 +13,7 @@
   &.-rounded {
     border-radius: map-get($borderRadii, "rounded");
   }
+
 }
 
 .Input:focus {

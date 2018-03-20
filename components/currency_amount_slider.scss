@@ -1,0 +1,12 @@
+.currency-amount-slider {
+  height: 30px;
+  &.-disable-min {
+    .handle-0 {
+      display: none;
+    }
+  }
+  .slider-value {
+    cursor: pointer;
+    color: #fff !important;
+  }
+}

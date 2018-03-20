@@ -1,0 +1,64 @@
+.labeled-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  & > label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    text-transform: uppercase;
+    font-size: map-get($fontSizes, 'xs');
+    color: map-get($colors, 'grey');
+    z-index: 1;
+  }
+
+  & input::placeholder {
+    color: map-get($colors, 'grey-placeholder');
+  }
+
+  & input {
+    height: 100%;
+    padding: 2rem 1rem;
+    padding-bottom: 1rem;
+    line-height: map-get($fontSizes, 'l');
+    font-size: map-get($fontSizes, 'default');
+    outline: none;
+    border: 1px solid map-get($colors, 'grey-l');
+    border-radius: 3px;
+  }
+
+  & input:focus {
+    border-color: map-get($colors, 'blue');
+  }
+
+  // pikaday close button hack
+  & .cursor-pointer {
+    right: 1rem !important;
+  }
+
+  &.-error {
+    border-color: map-get($colors, 'red');
+
+    & > label {
+      color: map-get($colors, 'red');
+    }
+
+    & input {
+      border-color: map-get($colors, 'red');
+      padding-bottom: 2rem;
+    }
+
+    & > span {
+      width: 85%;
+      position: absolute;
+      bottom: .5rem;
+      color: map-get($colors, 'red');
+      font-size: map-get($fontSizes, 'xs');
+      padding-top: map-get($spacing, 'xs');
+      margin: map-get($spacing, 'xs') map-get($spacing, 'default');
+      margin-top: map-get($spacing, 'xs');
+      border-top: 1px solid map-get($colors, 'red');
+    }
+  }
+}

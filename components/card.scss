@@ -1,7 +1,8 @@
 .card {
   background-color: white;
   border-radius: map-get($borderRadii, "s");
-  box-shadow: 0 1px 1px rgba(39,51,67,0.1);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.05);
+  overflow: hidden;
 
   &.-small { padding: map-get($spacing, "s"); }
   &.-medium { padding: map-get($spacing, "m"); }
@@ -35,6 +36,25 @@
     transform: scale(1.01);
   }
 
+  &.-blue {
+    color: white;
+    background-image: linear-gradient(map-get($colors, "blue"), map-get($colors, "brand"));
+  }
+
+  &.-gradient-blue {
+    color: white;
+    background: map-get($gradientColors, 'blue');
+  }
+
+  &.-gradient-purple {
+    color: white;
+    background: map-get($gradientColors, 'purple');
+  }
+
+  &.-gradient-red {
+    color: white;
+    background: map-get($gradientColors, 'red');
+  }
 }
 
 // I will eventually replace all of this with the above
@@ -137,9 +157,4 @@
 .card.card-brand {
   background-color: map-get($colors, "black");
   color: white;
-}
-
-.card-blue {
-  color: white;
-  background-image: linear-gradient(map-get($colors, "blue"), map-get($colors, "brand"));
 }

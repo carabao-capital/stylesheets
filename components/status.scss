@@ -15,6 +15,14 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  &.-medium {
+    font-family: "Averta-Semibold";
+    font-size: map-get($fontSizes, 'xxs');
+    height: map-get($spacing, "m");
+    padding-left: map-get($spacing, "xm");
+    padding-right: map-get($spacing, "xm");
+  }
+
   &.-neutral {
     background-color: map-get($colors, 'gray100');
     color: map-get($colors, 'gray500');

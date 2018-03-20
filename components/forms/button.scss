@@ -8,7 +8,6 @@
   color: map-get($colors, "gray900");
   cursor: pointer;
   display: inline-flex;
-  font-family: "Averta-Light";
   font-size: map-get($fontSizes, 'xs');
   min-height: map-get($spacing, "l");
   letter-spacing: .06em;
@@ -36,7 +35,6 @@
       color: map-get($colors, "white");
     }
   }
-
 
   // Disabled button
   &.disabled, &.-disabled {
@@ -80,8 +78,18 @@
   }
 
   &.-large {
-    padding-top: map-get($spacing, 'xm');
-    padding-bottom: map-get($spacing, 'xm');
+    font-size: map-get($fontSizes, 'm');
+    padding-top: map-get($spacing, 'm');
+    padding-bottom: map-get($spacing, 'm');
+  }
+
+  // TODO: organize later
+  &.-blue-gradient {
+    background: map-get($gradientColors, 'blue');
+    padding-top: map-get($spacing, 'm');
+    padding-bottom: map-get($spacing, 'm');
+    text-transform: capitalize;
+    font-size: map-get($fontSizes, 'm');
   }
 }
 
@@ -164,7 +172,7 @@
   background-size: map-get($spacing, "xm") map-get($spacing, "xm");
   color: transparent;
 
-  &.primary, &.-primary {
+  &.primary, &.-primary, &.-brand {
     background-image: image_url("loaders/loading-blue.gif");
   }
 

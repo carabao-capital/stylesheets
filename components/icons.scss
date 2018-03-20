@@ -6,6 +6,12 @@
   height: 1em;
   vertical-align: -0.05em;
   width: 1em;
+
+  &.-small { font-size: map-get($fontSizes, "s"); };
+  &.-medium { font-size: map-get($fontSizes, "m"); };
+  &.-large { font-size: map-get($fontSizes, "l"); };
+
+  &.-bold { font-weight: bold; };
 }
 
 .icon-xs {

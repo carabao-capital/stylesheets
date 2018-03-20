@@ -1,8 +1,8 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 680px;
+  max-width: 42rem;
 
-  &.-large, &.large { max-width: 1120px; }
-  &.-small, &.small { max-width: 320px; }
+  &.-large, &.large { max-width: 70rem; }
+  &.-small, &.small { max-width: 20rem; }
 }

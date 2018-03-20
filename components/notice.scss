@@ -3,9 +3,9 @@
   border: 1px solid map-get($colors, "blue");
   border-radius: map-get($borderRadii, "s");
   color: map-get($colors, "blue");
-  font-size: map-get($fontSizes, "s");
+  font-size: map-get($fontSizes, "default");
   line-height: 22px;
-  padding: map-get($spacing, "s");
+  padding: map-get($spacing, "default");
   width: 100%;
 
   &.-neutral {

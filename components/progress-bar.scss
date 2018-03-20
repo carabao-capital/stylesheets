@@ -4,29 +4,29 @@
   align-items: center;
   padding: map-get($spacing, "s") 0;
 
-  & > .progress-bar {
-    width: 90%;
-  }
+  & > .progress-bar { width: 90%; }
   & > .info {
+    font-size: map-get($fontSizes, 's');
     text-align: center;
     width: 10%;
   }
 
   &.-full {
     position: relative;
-    height: map-get($spacing, 'l');
+    height: 100%;
     padding: 0;
 
     & > .progress-bar {
       width: 100%;
       height: 100%;
-      border-radius: 0;
     }
 
     & > .info {
       width: 100%;
       position: absolute;
       text-align: center;
+      color: white;
+      bottom: 0;
     }
   }
 
@@ -63,16 +63,18 @@
   }
 }
 
-.progress-bar {
+.progress-container > .progress-bar {
   background-color: map-get($colors, 'gray100');
   border-radius: map-get($borderRadii, "rounded");
   display: inline-block;
   height: map-get($spacing, "xm");
   overflow: hidden;
   width: 100%;
+
+  &.-noradius { border-radius: 0; }
 }
 
-.progress-bar > .current-progress {
+.progress-container > .progress-bar > .current-progress {
   width: 0;
   height: 100%;
   background-color: map-get($colors, 'blue500');

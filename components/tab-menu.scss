@@ -17,10 +17,19 @@
   margin-right:   map-get($spacing, "xm");
   padding-top:    map-get($spacing, "xm");
   padding-bottom: map-get($spacing, "xm");
-  color: map-get($colors, 'gray500');
   text-decoration: none;
   font-size: map-get($fontSizes, "xs");
+  color: map-get($colors, 'gray500');
   cursor: pointer;
+
+  &.-small { font-size: map-get($fontSizes, "s"); }
+  &.-medium { font-size: map-get($fontSizes, "m"); }
+  &.-large { font-size: map-get($fontSizes, "l"); }
+}
+
+.TabGroup.-tight .Tab {
+  margin-left:    map-get($spacing, "s");
+  margin-right:   map-get($spacing, "s");
 }
 
 .Tab:hover, .tab:hover {
@@ -29,7 +38,7 @@
 
 .Tab.active, .tab.-active {
   color: map-get($colors, "blue");
-  border-bottom: 2px solid map-get($colors, "blue");
+  border-bottom: 3px solid map-get($colors, "blue");
   cursor: default;
 }
 
@@ -37,4 +46,26 @@
   color: map-get($colors, "grey-l");
   border-color: map-get($colors, "grey-xl");
   pointer-events: none;
+}
+
+.tab-menu.-rounded > .tab.-active {
+  padding: map-get($spacing, 's');
+  border-radius: map-get($borderRadii, "rounded");
+  border: 2px solid map-get($colors, "blue");
+  cursor: default;
+  color: map-get($colors, "blue");
+}
+
+.tab.-active {
+  color: map-get($colors, "blue");
+  border-bottom: 2px solid map-get($colors, "blue");
+  cursor: default;
+}
+
+.Tab.greyed {
+  color: map-get($colors, "grey-l");
+  border-color: map-get($colors, "grey-xl");
+  .status {
+    cursor: auto;
+  }
 }

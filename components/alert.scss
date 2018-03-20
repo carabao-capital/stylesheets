@@ -3,11 +3,11 @@
     border-radius: map-get($borderRadii, "s");
     box-shadow: 0 2px 20px rgba(map-get($colors, "black"), 0.1);
     color: map-get($colors, "white");
-    font-size: map-get($fontSizes, "s");
+    font-size: map-get($fontSizes, "m");
     max-width: 260px;
     opacity: 0;
     position: fixed;
-    padding: map-get($spacing, "s");
+    padding: map-get($spacing, "m");
     right: 20px;
     top: 20px;
     transform: translate(100px, 0);
