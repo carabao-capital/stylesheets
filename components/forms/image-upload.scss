@@ -1,11 +1,16 @@
 .image-upload {
-  height: 10rem;
+  align-items: center;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
   overflow: hidden;
+}
+
+.image-upload-large {
+  @extend .image-upload;
+
+  height: 10rem;
+  position: relative;
   background-color: map-get($colors, 'grey-xl');
 
   & > .image {

@@ -69,3 +69,36 @@
     cursor: auto;
   }
 }
+// TODO: move this somewhere else
+.tab {
+  margin: 0px;
+  padding-left: map-get($spacing, 'xm');
+  padding-right: map-get($spacing, 'xm');
+
+  &.-with-select {
+    select {
+      border: none;
+      background: none;
+      color: map-get($colors, 'gray500');
+      font-size: map-get($fontSizes, 'm');
+      font-family: "Averta-Regular";
+      line-height: 24px;
+      width: auto;
+      padding: 0px;
+      &:focus {
+        outline: none
+      }
+    }
+  }
+
+  &.-active.-with-select {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+
+  #width-calculator {
+    font-size: map-get($fontSizes, 'm');
+    font-family: Averta;
+    display: none;
+  }
+}

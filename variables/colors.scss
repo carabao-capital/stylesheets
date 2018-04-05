@@ -4,9 +4,20 @@ $colors: (
 
   'black': #141414,
 
+  'gray50': hsl(0, 0%, 98%),
+  'gray100': hsl(210, 22%, 96%),
+  'gray200': hsl(210, 22%, 92%),
+  'gray300': hsl(210, 26%, 82%),
+  'gray400': hsl(210, 12%, 64%),
+  'gray500': hsl(210, 14%, 47%),
+  'gray700': hsl(210, 15%, 15%),
+  'gray900': hsl(210, 20%, 10%),
+
+
   'blue100': hsl(210, 100%, 96%),
   'blue500': hsl(210, 100%, 50%),
   'blue700': hsl(210, 90%, 36%),
+  'blue900': #000C38,
 
   'yellow100': hsl(54, 90%, 90%),
   'yellow500': hsl(54, 96%, 50%),
@@ -21,25 +32,26 @@ $colors: (
   'green500': hsl(158, 84%, 41%),
   'green700': hsl(158, 90%, 26%),
 
-  'gray100': hsl(210, 22%, 96%),
-  'gray200': hsl(210, 22%, 92%),
-  'gray300': hsl(210, 26%, 82%),
-  'gray400': hsl(210, 12%, 64%),
-  'gray500': hsl(210, 14%, 47%),
-  'gray700': hsl(210, 15%, 15%),
-  'gray900': hsl(210, 20%, 10%),
-
   // default color palette
   'brand':   hsl(212, 100%, 43%),
-  'blue':    hsl(210, 100%, 55%),
+  'blue':    hsl(208, 89%, 53%),
   'green':   hsl(166, 84%, 41%),
   'yellow':  hsl(45, 81%, 61%),
   'red':     hsl(355, 94%, 66%),
-  'grey-d':  hsl(210, 23%, 36%),
+  //'grey-d':  hsl(210, 23%, 36%),
+  'grey-d':  #616161,
   'grey':    hsl(219, 14%, 54%),
   'grey-l':  hsl(218, 11%, 85%),
   'grey-xl': hsl(240, 11%, 96%),
   'white-transparent': hsla(0, 0%, 100%, .8),
+  'grey-placeholder': #d4d4d4
+);
+
+$gradientColors: (
+  'blue': linear-gradient(90deg, #00b5ff, #3932f5),
+  'purple': linear-gradient(45.4deg, #2CB2EA 0%, #6B83EA 100%),
+  'light-blue': linear-gradient(91deg, #00fcd4, #00b5ff),
+  'red': linear-gradient(135deg, #FF512F 0%, #DD2476 100%),
 );
 
 // semantic colors
@@ -49,5 +61,6 @@ $semanticColors: (
   'primary':  map-get($colors, 'blue'),
   'positive': map-get($colors, 'green'),
   'negative': map-get($colors, 'red'),
-  'warning':  map-get($colors, 'yellow')
+  'warning':  map-get($colors, 'yellow'),
+  'white':  map-get($colors, 'white')
 );
